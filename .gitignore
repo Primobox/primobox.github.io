@@ -1,3 +1,6 @@
 .idea/
 *.iml
-src/.sass-cache/
+.sass-cache/
+_site/dev.sh
+_site/Dockerfile
+_site/README.adoc
