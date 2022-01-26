@@ -2,7 +2,7 @@
 
 == Comment contribuer
 
-Si c'est la première fois que vous contribuez, merci de penser à remplir votre profil dans le fichier *src/_config.yml*
+Si c'est la première fois que vous contribuez, merci de penser à remplir votre profil dans le fichier *_config.yml*
 
 === Création d'une nouvelle branche
 
@@ -12,7 +12,7 @@ Idéalement, pensez dans votre pull request à *détailler l'objectif de votre a
 
 === Création de l'article
 
-Tout nouvel article doit donner lieu à la création d'un fichier dans le dossier *src/_posts*, sous le format *yyyy-MM-dd-nom-de-l-article.md*
+Tout nouvel article doit donner lieu à la création d'un fichier dans le dossier *_posts*, sous le format *yyyy-MM-dd-nom-de-l-article.md*
 
 L'entête de l'article doit avoir la forme suivante :
 

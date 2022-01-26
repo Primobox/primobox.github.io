@@ -31,6 +31,6 @@ RUN gem install jekyll-gist -v 1.5.0
 EXPOSE 35729
 
 VOLUME /blog
-WORKDIR /blog/src
+WORKDIR /blog
 
 CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--livereload", "--incremental"]
