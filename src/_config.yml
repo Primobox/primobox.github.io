@@ -1,0 +1,83 @@
+# Site
+name: "Tech Blog"
+title: "Tech Blog"
+description: "Innover, Partager, Grandir ensemble"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl:
+disqus: 'primoboxtechblog'
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  jgavard:
+    name: Julien Gavard
+    display_name: Julien Gavard
+    avatar: 'assets/images/jgavard.jpeg'
+    email: j.gavard@primobox.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+  vdubois:
+    name: Vincent Dubois
+    display_name: Vincent Dubois
+    avatar: 'assets/images/vdubois.png'
+    email: v.dubois@primobox.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/vdubois
+    description: "Adepte du TDD, de Domain Driven Design et de l'Architecture Hexagonale. Fervent combattant du modèle de domaine anémique, je donne les clés aux équipes dans lesquelles j'interviens afin de le combattre."
+  dboue:
+    name: Damien Boué
+    display_name: Damien Boué
+    avatar: 'assets/images/avatar.png'
+    email: d.boue@primobox.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/vdubois
+    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+  gsaintetienne:
+    name: Guillaume Saint Etienne
+    display_name: Guillaume Saint Etienne
+    avatar: 'assets/images/gsaintetienne.jpg'
+    email: yohm31@gmail.com
+    web: https://www.linkedin.com/in/guillaumese/
+    description: "J'ai écrit mes premières lignes de code à l'âge de 11 ans sur un ZX81. J'ai développé des écrans Videotex :-o. Je suis artisan développeur depuis 30 ans déjà, j'ai aussi été architecte logiciel, chef de projet, responsable d'équipe, j'ai travaillé pour diverses ESN et éditeurs logiciels, dont Varian Medical Systems pendant 10 ans, Primobox plus récemment. Actuellement Senior Dev chez Sunday. C# + JS depuis le début, j'ai récemment plongé dans Kotlin avec délectation. Je pense que bien développer c'est: 70% de discussion, 20% de tests, 10% de code."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-gist
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [LICENSE.txt, Gemfile, Gemfile.lock]

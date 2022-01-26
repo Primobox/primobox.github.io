@@ -1,0 +1,41 @@
+= Tech Blog Primobox
+
+== Comment contribuer
+
+Si c'est la première fois que vous contribuez, merci de penser à remplir votre profil dans le fichier *src/_config.yml*
+
+=== Création d'une nouvelle branche
+
+Avant de créer votre article, pensez à créer une branche dédiée, afin de pouvoir proposer votre article sous forme de pull request.
+
+Idéalement, pensez dans votre pull request à *détailler l'objectif de votre article*.
+
+=== Création de l'article
+
+Tout nouvel article doit donner lieu à la création d'un fichier dans le dossier *src/_posts*, sous le format *yyyy-MM-dd-nom-de-l-article.md*
+
+L'entête de l'article doit avoir la forme suivante :
+
+[source,markdown]
+----
+---
+layout: post
+title:  "Mon article"
+author: author # référence de l'auteur dans le fichier _config.yml
+categories: [ Catégorie 1, Catégorie 2 ]
+image: assets/images/nom-de-l-article/nom-de-l-article.jpg
+description: "Description détaillée de l'article"
+hidden: false # à changer pour masquer l'article ou non
+---
+----
+
+=== Mode développement et live reload
+
+Pour voir le rendu de votre article, ouvrez un terminal, et tapez :
+
+[source,shell script]
+----
+./dev.sh
+----
+
+Une fois le serveur Jekyll lancé, ouvrez votre navigateur à l'URL http://localhost:4000
