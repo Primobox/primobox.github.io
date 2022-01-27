@@ -362,6 +362,11 @@ blockquote {
 .article-post p,
 .article-post blockquote {
     margin: 0 0 1.5rem 0;
+    text-align: justify;
+}
+
+.article-post li {
+    text-align: justify;
 }
 
 .featured-image {
