@@ -16,7 +16,7 @@ authors:
     display_name: Julien Gavard
     avatar: 'assets/images/jgavard.jpeg'
     email: j.gavard@primobox.com
-    web: https://www.wowthemes.net
+    web: https://www.linkedin.com/in/julien-gavard-974654120/
     twitter: https://twitter.com/wowthemesnet
     description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
   vdubois:
@@ -24,7 +24,7 @@ authors:
     display_name: Vincent Dubois
     avatar: 'assets/images/vdubois.png'
     email: v.dubois@primobox.com
-    web: https://www.wowthemes.net
+    web: https://www.linkedin.com/in/vincent-dubois-5463b08b/
     twitter: https://twitter.com/vdubois
     description: "Adepte du TDD, de Domain Driven Design et de l'Architecture Hexagonale. Fervent combattant du modèle de domaine anémique, je donne les clés aux équipes dans lesquelles j'interviens afin de le combattre."
   dboue:
@@ -32,7 +32,7 @@ authors:
     display_name: Damien Boué
     avatar: 'assets/images/avatar.png'
     email: d.boue@primobox.com
-    web: https://www.wowthemes.net
+    web: https://www.linkedin.com/in/damien-boue/
     twitter: https://twitter.com/vdubois
     description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
   gsaintetienne:
