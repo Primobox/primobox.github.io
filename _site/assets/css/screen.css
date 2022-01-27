@@ -188,6 +188,7 @@ section.recent-posts {
 }
 
 .post-top-meta .author-thumb {
+    min-width: 120px;
     width: 120px;
     height: 120px;
 }
