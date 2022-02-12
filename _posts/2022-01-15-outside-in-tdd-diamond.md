@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "L'Outside-in Diamond TDD, ou l'art de tester mieux"
+title:  "L'Outside-in Diamond TDD, ou l'art de mieux tester"
 author: vdubois
 categories: [ TDD, Architecture ]
 image: assets/images/outside-in-diamond-tdd/outside-in-diamond-resume.jpg
@@ -15,9 +15,9 @@ hidden: false
 Développer de bons tests unitaires n'est pas une tâche aisée. Même les développeurs les plus expérimentés peuvent tomber dans les pièges "classiques" de la pratique du développement des tests automatisés.
 
 Les plus courants sont :
-* **Les tests fragiles** : ce que l'on teste dans ceux-ci est souvent l'implémentation. Ces tests utilisent largement les mocks. Lors d'un refactoring, ils devront être mis à jour systématiquement et ce sera coûteux.
-* **Les tests "inutiles"** : ce sont des tests qui couvrent du code trivial, et qui n'apportent pas de plus value au projet. Ce sont des tests qui ne sont pas orientés métier. Par exemple : un test qui va tester une classe de mapping.
-* **Les tests trop complexes** : ceux-ci sont souvent des tests d'intégration qui nécessitent beaucoup de plomberie (liée aux prérequis) que l'on ne voit pas. De ce fait, ils deviennent rapidement très difficiles à maintenir. Ils sont souvent très lents à exécuter et difficiles à comprendre (du code complexe avec de nombreuses lignes de code).
+* **Les tests fragiles** : ce que l'on teste dans ceux-ci est souvent l'implémentation, dû à l'utilisation excessive de mocks. Lors d'un refactoring, ils devront être mis à jour systématiquement et ce sera coûteux.
+* **Les tests "inutiles"** : ce sont des tests qui couvrent du code trivial, et qui n'apportent pas de plus-value au projet. Ce sont des tests qui ne sont pas orientés métier. Par exemple : un test qui va tester une classe de mapping.
+* **Les tests trop complexes** : ceux-ci sont souvent des tests d'intégration qui nécessitent beaucoup de plomberie (liée aux prérequis) que l'on ne voit pas. De ce fait, ils deviennent rapidement très difficiles à maintenir. Ils sont souvent très lents à exécuter, difficiles à comprendre et portent sur du code complexe avec de nombreuses lignes de code.
 
 Mais alors, comment peut-on réaliser des tests plus robustes ? Pour cela, laissez-moi vous présenter l'**Outside-in Diamond TDD**.
 
@@ -27,9 +27,9 @@ L'Outside-in Diamond TDD est une technique d'approche des tests unitaires mise a
 
 L'idée de base est née d'une constatation : la notion de tests unitaires est mal comprise par la majorité des développeurs. En effet, ceux-ci pensent qu'un test unitaire est un bout de code qui va tester un petit composant en isolation des autres. Or, comme le fait si bien remarquer Thomas Pierrain, la définition de [**Kent Beck**](https://fr.wikipedia.org/wiki/Kent_Beck) est beaucoup plus juste :
 
-> Tests that “runs in isolation” from other tests
+> Tests that “runs in isolation” from other tests (des tests qui s'exécutent en isolation des autres tests)
 
-Un bon test unitaire s'isole donc lui-même des autres tests, il n'isole pas le composant qu'il teste des autres composants. Cela veut dire que l'on peut faire des tests unitaires qui ne testent pas qu'une classe.
+Un bon test unitaire s'isole donc lui-même des autres tests, il n'isole pas le composant qu'il teste des autres composants. Cela veut dire que l'on peut faire des tests unitaires qui ne testent pas qu'une classe. Ce n'est pas tout : un bon test unitaire s'isole avant tout des dépendances externes (base de données, disque, API externe...).
 
 De plus, Thomas Pierrain a constaté que la [**pyramide des tests**](https://martinfowler.com/bliki/TestPyramid.html) est souvent utilisée de manière dogmatique sans que les développeurs ne se posent la question de ce qui est pertinent à tester.
 
@@ -78,7 +78,7 @@ Voyons maintenant un exemple de code pour ces tests (gestion de panier sur un si
 
 ## Conclusion
 
-Finalement, qu'est ce que c'est qu'un _"bon"_ test unitaire ? Si on interroge des développeurs différents, on aura sûrement des définitions différentes.
+Finalement, qu'est ce que c'est qu'un _"bon"_ test unitaire ? Il existe autant de définitions d'un bon test qu'il existe de développeurs.
 
 Pour moi, un bon test unitaire est un test qui va **tester un contrat métier**, sans se préoccuper de l'implémentation. De cette manière, il pourra survivre à tous les refactorings.
 
