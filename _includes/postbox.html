@@ -55,7 +55,7 @@
                 <span class="author-meta">
                 <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a>{% if post.author2 %}, <a target="_blank" href="{{ author2.web }}">{{ author2.display_name }}</a>{% endif %}</span><br/>
                 {% endif %}
-                <span class="post-date">{{ post.date | date_to_string }}</span>
+                <span class="post-date">{% include translated_date.html date=post.date format="%-d %B %Y" lang="fr" %}</span>
                 </span>
                 <div class="post-reading-time-container">
                     <span class="post-reading-time-card">{% include read_time.html %}</span>
