@@ -5,8 +5,8 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Feb 2022 13:20:15 -0600</pubDate>
-    <lastBuildDate>Wed, 02 Feb 2022 13:20:15 -0600</lastBuildDate>
+    <pubDate>Sat, 12 Feb 2022 05:02:36 -0600</pubDate>
+    <lastBuildDate>Sat, 12 Feb 2022 05:02:36 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -29,7 +29,7 @@
 
 &lt;h2 id=&quot;vision&quot;&gt;Vision&lt;/h2&gt;
 
-&lt;p&gt;Un projet réussi commence par une vision. Alexandre Fillatre, CTO chez Primobox a su initier et nourrir cette vision. Basée sur une idée simple : les différentes phases qui composent l’activité de l’offre de service chez Primobox (dématérialisation de la relation entre employés et employeurs) ont chacune une raison d’exister propre, tout en étant capable d’interagir avec les autres parties et d’évoluer de manière autonome. Alexandre nous a partagé cette vision et nous a fait confiance pour la mettre en œuvre.&lt;/p&gt;
+&lt;p&gt;Un projet réussi commence par une vision. &lt;a href=&quot;https://www.linkedin.com/in/alexandre-fillatre-696643168/&quot;&gt;Alexandre Fillatre&lt;/a&gt;, CTO chez Primobox a su initier et nourrir cette vision. Basée sur une idée simple : les différentes phases qui composent l’activité de l’offre de service chez Primobox (dématérialisation de la relation entre employés et employeurs) ont chacune une raison d’exister propre, tout en étant capable d’interagir avec les autres parties et d’évoluer de manière autonome. Alexandre nous a partagé cette vision et nous a fait confiance pour la mettre en œuvre.&lt;/p&gt;
 
 &lt;h2 id=&quot;utilisateurs&quot;&gt;Utilisateurs&lt;/h2&gt;
 
@@ -119,7 +119,7 @@ On notera aussi que Kotlin dispose nativement de structures de données avancée
 
 &lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8o9r2etj2tth05ulw2f9.jpeg&quot; alt=&quot;DDD starter&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Comme dit précédemment, j’ai commencé par la mise en place d’une Wardley Map, puis avec Damien Boué nous avons travaillé sur des Bounded Contexts Maps. Cela nous a permis de nous synchroniser aussi avec les équipes Produit.&lt;/p&gt;
+&lt;p&gt;Comme dit précédemment, j’ai commencé par la mise en place d’une Wardley Map, puis avec &lt;a href=&quot;https://www.linkedin.com/in/damien-boue/&quot;&gt;Damien Boué&lt;/a&gt; nous avons travaillé sur des Bounded Contexts Maps. Cela nous a permis de nous synchroniser aussi avec les équipes Produit.&lt;/p&gt;
 
 &lt;h2 id=&quot;tactique&quot;&gt;Tactique&lt;/h2&gt;
 
@@ -206,7 +206,7 @@ Par contre pour toute opération en base de données (nous avons, en prévision 
 
 &lt;p&gt;Mieux encore, cette immutabilité est facile à obtenir avec des langages tels que Kotlin (celui que nous avons choisi pour ce projet) ou même Java (le mot clé &lt;em&gt;final&lt;/em&gt; existe et il a été ensuite complété avec des librairies qui poussent une vraie immutabilité des objets, comme par exemple  &lt;a href=&quot;https://www.baeldung.com/immutables&quot;&gt;https://www.baeldung.com/immutables&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;Elle permet de transitionner naturellement vers une écriture de code plus “fonctionnelle” c’est -à -dire avec une meilleur répartition des responsabilités (voir chapitre suivant), et une plus grande intégrité référentielle.&lt;/p&gt;
+&lt;p&gt;Elle permet de transitionner naturellement vers une écriture de code plus “fonctionnelle” c’est-à-dire avec une meilleur répartition des responsabilités (voir chapitre suivant), et une plus grande intégrité référentielle.&lt;/p&gt;
 
 &lt;h2 id=&quot;solide&quot;&gt;Solide&lt;/h2&gt;
 
@@ -222,7 +222,7 @@ Par contre pour toute opération en base de données (nous avons, en prévision 
 
 &lt;p&gt;Exemple : au lieu de dire à notre code “je veux une base de données Mongo pour stocker des informations”, nous avons établi une abstraction (interface) qui dit “je veux pouvoir stocker cette information”. Le “comment” ne nous intéresse absolument pas.&lt;/p&gt;
 
-&lt;p&gt;En se référant à cette abstraction ( “Je_veux_stocker_information_X” ), nous voilà libres de son implémentation. Et c’est double bénéfice.&lt;/p&gt;
+&lt;p&gt;En se référant à cette abstraction (“Je_veux_stocker_information_X”), nous voilà libres de son implémentation. Et c’est double bénéfice.&lt;/p&gt;
 
 &lt;p&gt;D’abord nous pouvons choisir librement l’implémentation et en changer à tout moment au cours de la vie du projet (nous avons choisi Mongo DB mais peut être que ce choix sera remis en cause).&lt;/p&gt;
 

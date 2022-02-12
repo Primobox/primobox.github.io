@@ -9,7 +9,6 @@ description: "Trouver une entreprise dans laquelle on peut progresser, apprendre
 Primobox est de cette trempe là.
 
 Laissez-moi vous raconter brièvement cette aventure que j’ai eu la chance de vivre.
-
 "
 hidden: false
 ---
@@ -34,7 +33,7 @@ Avec un périmètre et des relations bien définis, ce véritable “métier dan
 
 ## Vision
 
-Un projet réussi commence par une vision. Alexandre Fillatre, CTO chez Primobox a su initier et nourrir cette vision. Basée sur une idée simple : les différentes phases qui composent l’activité de l’offre de service chez Primobox (dématérialisation de la relation entre employés et employeurs) ont chacune une raison d’exister propre, tout en étant capable d’interagir avec les autres parties et d’évoluer de manière autonome. Alexandre nous a partagé cette vision et nous a fait confiance pour la mettre en œuvre.
+Un projet réussi commence par une vision. [Alexandre Fillatre](https://www.linkedin.com/in/alexandre-fillatre-696643168/), CTO chez Primobox a su initier et nourrir cette vision. Basée sur une idée simple : les différentes phases qui composent l’activité de l’offre de service chez Primobox (dématérialisation de la relation entre employés et employeurs) ont chacune une raison d’exister propre, tout en étant capable d’interagir avec les autres parties et d’évoluer de manière autonome. Alexandre nous a partagé cette vision et nous a fait confiance pour la mettre en œuvre.
 
 
 ## Utilisateurs
@@ -104,12 +103,9 @@ Et j’allais oublier de mentionner les très [puissantes co-routines](https://w
 
 Tout au long de notre travail, une attention particulière a été portée aux autres membres de l’équipe. Nous avons communiqué régulièrement :
 
-
-
 * sur l’avancée du projet, même si nous n’avions pas de revue de sprint (on en parle plus loin), sur les innovations ou techniques que nous avions choisi de mettre en œuvre, car celles-ci pouvaient aussi trouver leur place dans d’autres projets du groupe.
 
 Nous sommes aussi dans une démarche d’invitation permanente : tous les autres membres de la R&D peuvent venir collaborer au projet, apprendre Kotlin ou tout autre concept que nous avons mis en œuvre.
-
 
 ## Langage Naturel
 
@@ -123,7 +119,6 @@ Nous avons réservé l’anglais pour les parties purement techniques (logées d
 
 C’est très pratique pour se rendre compte au premier coup d'œil si notre métier (en français) reste pur et ne se mélange pas avec des considérations techniques (en anglais).
 
-
 ## Stratégie
 
 L'approche DDD est un guide dans la nuit. Ce n’est pas à proprement parler une méthode, et surtout pas un framework. C’est un ensemble d’outils et de bonnes pratiques, tout à fait compatible avec l’agilité et le software craftsmanship.
@@ -132,8 +127,7 @@ Nous avons eu cette approche d’emblée, dès les premières heures du projet. 
 
 ![DDD starter](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8o9r2etj2tth05ulw2f9.jpeg)
 
-Comme dit précédemment, j’ai commencé par la mise en place d’une Wardley Map, puis avec Damien Boué nous avons travaillé sur des Bounded Contexts Maps. Cela nous a permis de nous synchroniser aussi avec les équipes Produit.
-
+Comme dit précédemment, j’ai commencé par la mise en place d’une Wardley Map, puis avec [Damien Boué](https://www.linkedin.com/in/damien-boue/) nous avons travaillé sur des Bounded Contexts Maps. Cela nous a permis de nous synchroniser aussi avec les équipes Produit.
 
 ## Tactique
 
@@ -149,14 +143,11 @@ Bien sûr cela demande à réfléchir plus et surtout à ne pas se laisser entra
 
 Donc, gardons les atomiques !
 
-
 ## Coeur
 
 L'une des (nombreuses) brillantes idées de ce projet a été de suivre le précepte de “[Functional Core/ Imperative Shell](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell)”, introduit en 2012 dans la communauté Ruby, puis repris plus récemment par [Kenneth Lange](https://www.kennethlange.com/) et aussi par [Thoman Pierrain & Bruno BOUCARD](https://www.slideshare.net/ThomasPierrain/hexagonal-architecture-vs-functional-core-iom) ;
 
 Cette approche a d’énormes avantages, citons-en 2 :
-
-
 
 * d'abord repousser les effets de bord (les fameux, ceux qui rendent vos tests trop compliqués, plus du tout isolés, voire inconsistants et cachent de nombreux bugs) en dehors des considérations métier.
 * corollaire : cela vous permet de vous concentrer sur la seule logique métier de manière fonctionnelle, c'est-à-dire en privilégiant [l’immutabilité](https://medium.com/@johnmcclean/dysfunctional-programming-in-java-2-immutability-a2cff487c224) et la [transparence référentielle](https://sookocheff.com/post/fp/why-functional-programming/).
@@ -164,7 +155,6 @@ Cette approche a d’énormes avantages, citons-en 2 :
 Cette façon de penser le logiciel en y plaçant un cœur purement fonctionnel (dans les 2 sens du terme) permet d’isoler vraiment les tests métiers et donc [de se passer entièrement des mocks à cet endroit](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-avoiding-mocks).
 
 Dans le cœur métier propre du Messager sont également apparues d’autres frontières, et donc d’autres Bounded Context pour des composants qui avaient besoin de pouvoir évoluer sans casser les autres. Tout ce travail d’_isolation_ (via des ACL, anti corruption layers) est primordial pour ne pas s’enfermer dans une complexité accidentelle et dans ce qui devient inexorablement, malgré toute bonne volonté, une “big ball of mud” (grosse boule de boue).
-
 
 ## Hexagone
 
@@ -180,7 +170,6 @@ L'absorption de commandes venues d’une API REST est un adaptateur indépendant
 Par contre pour toute opération en base de données (nous avons, en prévision d’un CQRS séparé les opérations de lecture et celles d’écriture), il y a des adaptateurs dédiés.
 
 Il en va de même pour les opérations d’envoi et de réception de messages dans un bus (afin de prévenir les agents dans d’autres Bounded Contexts qu’un événement important s’est passé dans notre domaine.
-
 
 ## Qualité
 
@@ -198,11 +187,8 @@ La Couverture de code a pu donc être constamment mesurée, mais j’en dirai pl
 
 D’autres outils sont venus renforcer cette recherche de qualité :
 
-
-
 * [ArchUnit](https://www.archunit.org/getting-started), pour vérifier en permanence le bon usage des dépendances et [vérifier que nous ne cassions pas les principes de l’architecture hexagonale](https://blog.scottlogic.com/2019/12/05/unit-test-your-architecture-with-archunit.html).
 * [Gatling](https://www.baeldung.com/introduction-to-gatling) pour s’assurer que notre solution tient la charge en situation réelle
-
 
 ## Rigueur
 
@@ -216,7 +202,6 @@ Simple d’usage, facile à ajouter à un pipeline d’intégration continue, ce
 
 Par contre, il est avisé d’utiliser ce genre d’outil sur du nouveau code plutôt que sur du legacy, et de cibler du code purement métier, c'est-à-dire au centre (functional core) de l'architecture hexagonale.
 
-
 ## Paradigme (changement de)
 
 Ce n’est pas chose facile que de bousculer (un peu) les habitudes des développeurs. Alors que la programmation orientée objet est maîtrisée par tous mes collègues, je leur ai fait la proposition de parier sur l’immutabilité.
@@ -225,15 +210,13 @@ L’immutabilité, c’est quoi ?  Une idée qui nous vient de la programmation 
 
 Mieux encore, cette immutabilité est facile à obtenir avec des langages tels que Kotlin (celui que nous avons choisi pour ce projet) ou même Java (le mot clé _final_ existe et il a été ensuite complété avec des librairies qui poussent une vraie immutabilité des objets, comme par exemple  [https://www.baeldung.com/immutables](https://www.baeldung.com/immutables)).
 
-Elle permet de transitionner naturellement vers une écriture de code plus “fonctionnelle” c'est -à -dire avec une meilleur répartition des responsabilités (voir chapitre suivant), et une plus grande intégrité référentielle.
-
+Elle permet de transitionner naturellement vers une écriture de code plus “fonctionnelle” c'est-à-dire avec une meilleur répartition des responsabilités (voir chapitre suivant), et une plus grande intégrité référentielle.
 
 ## Solide
 
 Notre attention s'est focalisée sur la production d' un code SOLID. Ce n’est pas facile de vous parler des principes d’un code SOLID, surtout que cela fait partie de la grande famille du code “propre” (Clean Code). Le premier principe est peut être le plus important et le plus simple à comprendre : Simple Responsibility. Et tous les autres en découlent. Nous avons toujours cherché dans ce projet à exprimer et répartir les responsabilités de façon très claire et très cohérente entre les différents modules.
 
 Que ce soit dans le découpage métier (Bounded Contexts, DDD Stratégique) ou dans l’approche technique (Archi Héxagonale DDD Tactique), notre objectif a tout le temps été de limiter la responsabilité à un niveau minimal et acceptable, afin de mieux séparer et isoler ces responsabilités. Les cartes CRC nous ont aussi beaucoup aidé à y voir plus clair dans notre design.
-
 
 ## Découplé
 
@@ -243,12 +226,11 @@ L’idée est d’exprimer simplement les choses en termes de “quoi” et non 
 
 Exemple : au lieu de dire à notre code “je veux une base de données Mongo pour stocker des informations”, nous avons établi une abstraction (interface) qui dit “je veux pouvoir stocker cette information”. Le “comment” ne nous intéresse absolument pas.
 
-En se référant à cette abstraction ( “Je_veux_stocker_information_X” ), nous voilà libres de son implémentation. Et c’est double bénéfice.
+En se référant à cette abstraction (“Je_veux_stocker_information_X”), nous voilà libres de son implémentation. Et c’est double bénéfice.
 
 D’abord nous pouvons choisir librement l’implémentation et en changer à tout moment au cours de la vie du projet (nous avons choisi Mongo DB mais peut être que ce choix sera remis en cause).
 
 Et surtout, pendant les tests fonctionnels, nous n’avons pas l’obligation de mettre en route la fameuse base de données Mongo que nous avons choisie pour la production. Nous pouvons juste utiliser un fake, c'est-à-dire une implémentation naïve, simpliste.
-
 
 ## Evenementiel
 
@@ -263,7 +245,6 @@ En pensant événements, on est au contraire ouvert à tout ce qui peut se passe
 On peut créer des programmes plus aptes à répondre au besoin métier, et moins coincé dans une solution technique.
 
 En pratique, nos agrégats métiers émettent des événements, en réaction à des commandes, après avoir opéré les vérifications métier qui s’imposent. Nous avons mis en place un mécanisme de remontée automatique des événements (event bubbling) depuis les entités filles qui composent un agrégat global (grâce à ReactiveX et ses [Observables](https://reactivex.io/documentation/observable.html)).
-
 
 ## Partage
 
@@ -287,27 +268,21 @@ Encore une fois, l’architecture hexagonale, avec son découplage maximum, nous
 
 Je suis très content d’avoir travaillé comme cela, car les revues de code nous ont permis de se poser la question “est ce que notre design reste cohérent” à chaque étape de la construction du logiciel.
 
-
 ## Agilité
 
 Il était important d’avoir du feedback rapide même sur un produit qui n’est pas encore mis en exploitation. Nous avons opté pour un travail en flux type Kanban, avec des jalons variables qui étaient matérialisés par des Minor Releases, selon nos désidérata et contraintes.
 
 Nous avons pu compter sur une Intégration Continue (CI/CD) super efficace grâce au soutien de l’équipe DevOps en place.
 
-
 ## Résultat
 
 Le projet n’est pas encore terminé, et vous n’en verrez pas une démonstration graphique, car ce n’est qu’un composant au milieu de tant d’autres. Mais comme il va devenir un maillon fort de l’édifice logiciel de Primobox, c’est la fiabilité, la rapidité et la performance de produits qui vont s’en trouver renforcées. Ainsi que la maîtrise technique des équipes R&D.
-
 
 ## Exemplaire
 
 Ce qui est d’emblée visible ce sont les métriques d’un code de qualité, tel que peut nous les montrer Sonarqube. Et pour moi c’est une grande fierté d’avoir contribué à ce projet.
 
-
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k30y78firzt2xl93svso.png)
-
-
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
