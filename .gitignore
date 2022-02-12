@@ -1,6 +1,7 @@
 .idea/
 *.iml
 .sass-cache/
+_site/dev.bat
 _site/dev.sh
 _site/Dockerfile
 _site/README.adoc
