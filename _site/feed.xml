@@ -5,8 +5,8 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Feb 2022 05:02:36 -0600</pubDate>
-    <lastBuildDate>Sat, 12 Feb 2022 05:02:36 -0600</lastBuildDate>
+    <pubDate>Sat, 12 Feb 2022 11:33:27 -0600</pubDate>
+    <lastBuildDate>Sat, 12 Feb 2022 11:33:27 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -303,6 +303,132 @@ Par contre pour toute opération en base de données (nous avons, en prévision 
         <category>Architecture</category>
         
         <category>Retour d'expérience</category>
+        
+      </item>
+    
+      <item>
+        <title>L'Outside-in Diamond TDD, ou l'art de mieux tester</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Image d’illustration : Copyright 42skillz / Thomas PIERRAIN&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;le-besoin&quot;&gt;Le besoin&lt;/h2&gt;
+
+&lt;p&gt;Développer de bons tests unitaires n’est pas une tâche aisée. Même les développeurs les plus expérimentés peuvent tomber dans les pièges “classiques” de la pratique du développement des tests automatisés.&lt;/p&gt;
+
+&lt;p&gt;Les plus courants sont :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Les tests fragiles&lt;/strong&gt; : ce que l’on teste dans ceux-ci est souvent l’implémentation, dû à l’utilisation excessive de mocks. Lors d’un refactoring, ils devront être mis à jour systématiquement et ce sera coûteux.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Les tests “inutiles”&lt;/strong&gt; : ce sont des tests qui couvrent du code trivial, et qui n’apportent pas de plus-value au projet. Ce sont des tests qui ne sont pas orientés métier. Par exemple : un test qui va tester une classe de mapping.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Les tests trop complexes&lt;/strong&gt; : ceux-ci sont souvent des tests d’intégration qui nécessitent beaucoup de plomberie (liée aux prérequis) que l’on ne voit pas. De ce fait, ils deviennent rapidement très difficiles à maintenir. Ils sont souvent très lents à exécuter, difficiles à comprendre et portent sur du code complexe avec de nombreuses lignes de code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mais alors, comment peut-on réaliser des tests plus robustes ? Pour cela, laissez-moi vous présenter l’&lt;strong&gt;Outside-in Diamond TDD&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;quest-ce-que-loutside-in-diamond-tdd-&quot;&gt;Qu’est ce que l’Outside-in Diamond TDD ?&lt;/h2&gt;
+
+&lt;p&gt;L’Outside-in Diamond TDD est une technique d’approche des tests unitaires mise au point par &lt;a href=&quot;http://tpierrain.blogspot.com/&quot;&gt;&lt;strong&gt;Thomas Pierrain&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;L’idée de base est née d’une constatation : la notion de tests unitaires est mal comprise par la majorité des développeurs. En effet, ceux-ci pensent qu’un test unitaire est un bout de code qui va tester un petit composant en isolation des autres. Or, comme le fait si bien remarquer Thomas Pierrain, la définition de &lt;a href=&quot;https://fr.wikipedia.org/wiki/Kent_Beck&quot;&gt;&lt;strong&gt;Kent Beck&lt;/strong&gt;&lt;/a&gt; est beaucoup plus juste :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Tests that “runs in isolation” from other tests (des tests qui s’exécutent en isolation des autres tests)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Un bon test unitaire s’isole donc lui-même des autres tests, il n’isole pas le composant qu’il teste des autres composants. Cela veut dire que l’on peut faire des tests unitaires qui ne testent pas qu’une classe. Ce n’est pas tout : un bon test unitaire s’isole avant tout des dépendances externes (base de données, disque, API externe…).&lt;/p&gt;
+
+&lt;p&gt;De plus, Thomas Pierrain a constaté que la &lt;a href=&quot;https://martinfowler.com/bliki/TestPyramid.html&quot;&gt;&lt;strong&gt;pyramide des tests&lt;/strong&gt;&lt;/a&gt; est souvent utilisée de manière dogmatique sans que les développeurs ne se posent la question de ce qui est pertinent à tester.&lt;/p&gt;
+
+&lt;p&gt;Pendant longtemps, il a cherché à lutter pour faire oublier ces fausses idées, sans succès. J’aime bien sa référence à la loi d’&lt;a href=&quot;https://fr.wikipedia.org/wiki/Loi_de_Brandolini&quot;&gt;&lt;strong&gt;Alberto Brandolini&lt;/strong&gt;&lt;/a&gt; à propos de ce sujet :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The amount of energy needed to refute bullshit is an order of magnitude larger than to produce it”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Donc plutôt que de lutter inutilement pour faire admettre ces idées, Thomas Pierrain est parti sur l’idée de promouvoir les &lt;a href=&quot;https://fr.wikipedia.org/wiki/Test_d%27acceptation&quot;&gt;&lt;strong&gt;tests d’acceptation&lt;/strong&gt;&lt;/a&gt;. En effet, ceux-ci sont plus faciles à faire accepter pour voir le système à tester comme une boîte noire. Les développeurs auront alors plutôt tendance à tester en termes de contrat métier, ce qui est plus sain pour la maintenabilité des projets.&lt;/p&gt;
+
+&lt;h4 id=&quot;outside-in&quot;&gt;Outside-in&lt;/h4&gt;
+
+&lt;p&gt;La notion d’&lt;strong&gt;Outside-in TDD&lt;/strong&gt; est assez simple à comprendre : on teste de l’extérieur en allant vers l’intérieur.&lt;/p&gt;
+
+&lt;p&gt;On commence donc par écrire des &lt;strong&gt;tests d’acceptation&lt;/strong&gt; “gros grains” qui sont orientés métier et testent le système en boîte noire. Pendant la phase red de TDD portant sur ces tests gros grains, on peut être amené à réaliser des boucles TDD plus petites sur l’intérieur du système, typiquement sur le modèle du domaine. A la fin, une fois toutes ces petites boucles réalisées, la boucle principale “gros grain” deviendra alors passante.&lt;/p&gt;
+
+&lt;h4 id=&quot;diamond&quot;&gt;Diamond&lt;/h4&gt;
+
+&lt;p&gt;La notion de &lt;strong&gt;Diamond&lt;/strong&gt; vient du fait que les tests réalisés changent complètement la pyramide de test telle que nous la connaissons.&lt;/p&gt;
+
+&lt;p&gt;Le diamant est fait pour symboliser l’importance et la prépondérance de ces tests d’acceptation par rapport aux autres types de tests (cf. image en haut de l’article) : tests unitaires, tests d’intégration, tests end-to-end.&lt;/p&gt;
+
+&lt;p&gt;Ce style de TDD nous oriente donc à écrire plus de tests haut niveau et moins de tests dans le détail.&lt;/p&gt;
+
+&lt;h2 id=&quot;pourquoi-loutside-in-diamond-tdd-est-si-intéressant-&quot;&gt;Pourquoi l’Outside-in Diamond TDD est si intéressant ?&lt;/h2&gt;
+
+&lt;p&gt;Cela fait quelques années maintenant que j’utilise l’&lt;a href=&quot;https://fr.wikipedia.org/wiki/Architecture_hexagonale_(logiciel)&quot;&gt;&lt;strong&gt;architecture hexagonale&lt;/strong&gt;&lt;/a&gt; dans mes projets en production. J’ai toujours privilégié les tests unitaires au niveau de mon modèle de domaine, en les construisant à partir des différents cas manipulés par mes services applicatifs.&lt;/p&gt;
+
+&lt;p&gt;Le schéma ci-dessous représente &lt;strong&gt;en vert la partie couverte&lt;/strong&gt; par les tests unitaires tels que je les réalisais :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/outside-in-diamond-tdd/old-hexagon-tests.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cela pose un problème majeur&lt;/strong&gt;. Il y a tout une partie de code qui se retrouve non testée : les adaptateurs de gauche (API REST par exemple) et les adaptateurs de droite (base de données par exemple). Ces parties sont matérialisées en jaune sur le schéma. Bien sûr, ils étaient couverts par les tests d’intégration, mais les tests d’intégration sont &lt;u&gt;lents&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thomas Pierrain nous fait le retour d’expérience suivant : la plupart des bugs subtils proviennent de ce code non testé, présent dans les adaptateurs. Il préconise donc de tester &lt;strong&gt;&lt;u&gt;tout l'hexagone&lt;/u&gt;&lt;/strong&gt;, en partant des adaptateurs de gauche, ainsi qu’en incluant les adaptateurs de droite (en mockant ou fakant uniquement les I/O, que ce soit de la base de données, du fichier ou du réseau).&lt;/p&gt;
+
+&lt;p&gt;C’est là tout l’intérêt de ce pattern de tests : on a des tests à la fois &lt;strong&gt;rapides&lt;/strong&gt; et qui couvrent &lt;strong&gt;largement&lt;/strong&gt; notre base de code.&lt;/p&gt;
+
+&lt;p&gt;On a alors un code couvert comme cela :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/outside-in-diamond-tdd/new-hexagon-tests.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Voyons maintenant un exemple de code pour ces tests (gestion de panier sur un site de e-commerce) :&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/83f89ba6a992b4b7e852f440c307710c.js&quot;&gt; &lt;/script&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Finalement, qu’est ce que c’est qu’un &lt;em&gt;“bon”&lt;/em&gt; test unitaire ? Il existe autant de définitions d’un bon test qu’il existe de développeurs.&lt;/p&gt;
+
+&lt;p&gt;Pour moi, un bon test unitaire est un test qui va &lt;strong&gt;tester un contrat métier&lt;/strong&gt;, sans se préoccuper de l’implémentation. De cette manière, il pourra survivre à tous les refactorings.&lt;/p&gt;
+
+&lt;p&gt;Mais ce n’est pas tout. Un bon test unitaire doit être &lt;strong&gt;parlant&lt;/strong&gt;. Il doit être &lt;strong&gt;concis&lt;/strong&gt;. Malheureusement, le code des tests unitaires est souvent considéré comme moins important que le code de production et c’est une erreur. Il faut qu’il soit traité avec la plus grande attention. Je vais même aller plus loin : si un test est bien écrit, il sera la documentation de votre use case que vous n’écrirez jamais.&lt;/p&gt;
+
+&lt;p&gt;Personnellement, j’aime bien l’approche proposée par &lt;a href=&quot;https://techleadjournal.dev/episodes/58/&quot;&gt;&lt;strong&gt;Vladimir Khorikov&lt;/strong&gt;&lt;/a&gt; pour définir la valeur d’un test. Pour lui, les 4 piliers fondamentaux d’un bon test sont :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;qu’il doit permettre d’intercepter une régression&lt;/li&gt;
+  &lt;li&gt;qu’il doit résister aux refactorings (grâce au fait qu’il ne soit pas lié à l’implémentation du système testé)&lt;/li&gt;
+  &lt;li&gt;qu’il doit fournir un feedback très rapide&lt;/li&gt;
+  &lt;li&gt;qu’il doit avoir un coût de maintenance faible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Je trouve que les tests réalisés en Outside-in Diamond TDD remplissent très bien ces fonctions :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ils interceptent bien les régressions car ce sont des tests d’acceptation orientés métier qui testent du comportement. Si celui-ci change, alors on le sait immédiatement.&lt;/li&gt;
+  &lt;li&gt;ils résistent au refactoring car on teste en boîte noire l’hexagone complet en partant des adaptateurs de gauche&lt;/li&gt;
+  &lt;li&gt;ils sont rapides, car on utilise le moins de frameworks possible et on mock les I/O (BDD, système de fichiers, réseau…)&lt;/li&gt;
+  &lt;li&gt;ils ont un coût de maintenance faible de par leur nature “métier”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Un autre avantage indéniable que je trouve à ce pattern de TDD : il permet d’écrire &lt;strong&gt;moins de tests&lt;/strong&gt; et &lt;strong&gt;mieux&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Chez &lt;strong&gt;Primobox&lt;/strong&gt;, nous mettons en place ce pattern de tests afin de pérenniser nos projets sur le long terme.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Sources :&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tpierrain.blogspot.com/2021/03/outside-in-diamond-tdd-1-style-made.html&quot;&gt;Outside-in Diamond 🔷 TDD #1 - a style made from (&amp;amp; for) ordinary people&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tpierrain.blogspot.com/2021/03/outside-in-diamond-tdd-2-anatomy-of.html&quot;&gt;Outside-in Diamond 🔷 TDD #2 (anatomy of a style)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techleadjournal.dev/episodes/58/&quot;&gt;Tech Lead Journal #58 - Principles for Writing Valuable Unit Tests - Vladimir Khorikov&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 15 Jan 2022 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/outside-in-tdd-diamond/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/outside-in-tdd-diamond/</guid>
+        
+        
+        <category>TDD</category>
+        
+        <category>Architecture</category>
         
       </item>
     
