@@ -30,11 +30,11 @@ authors:
   dboue:
     name: Damien Boué
     display_name: Damien Boué
-    avatar: 'assets/images/avatar.png'
+    avatar: 'assets/images/dboue.jpd'
     email: d.boue@primobox.com
     web: https://www.linkedin.com/in/damien-boue/
-    twitter: https://twitter.com/vdubois
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+    twitter: https://twitter.com/damienboue
+    description: "Développeur"
   gsaintetienne:
     name: Guillaume Saint Etienne
     display_name: Guillaume Saint Etienne
