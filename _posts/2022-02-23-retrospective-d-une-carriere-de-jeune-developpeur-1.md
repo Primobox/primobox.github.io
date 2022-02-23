@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Mon article"
-author: author # référence de l'auteur dans le fichier _config.yml
-categories: [ Catégorie 1, Catégorie 2 ]
-image: assets/images/nom-de-l-article/nom-de-l-article.jpg
+title:  "Ma carrière de jeune développeur (1/2)"
+author: dboue
+categories: [ Retour d'expérience, Clean codeur ]
+image: assets/images/retrospective-d-une-carriere-de-jeune-developpeur-1/developpeur-bureau.jpg
 description: "Description détaillée de l'article"
 hidden: false # à changer pour masquer l'article ou non
 ---
-
-# Ma carrière de jeune développeur (1/2)
 
 Cela fait maintenant 5 ans que j'ai terminé mes études et pourtant je n'ai eu de cesse de revoir ma définition de ce que c'est qu'être un développeur. 
 
@@ -44,7 +42,7 @@ Autant vous dire que j'ai reproduit toutes les erreurs qu'il y avait déjà dans
 À l'époque j'étais bien incapable de remettre en question ce projet exemple et encore plus ma manière de développer. J'étais relativement seul sur le projet et j'ai eu peu d'aide externe sauf quand j'osais la demander. J'étais dans les temps donc personne me demandais des comptes et personnes a pris le temps de vérifier que je ne faisais pas de "bêtises".
 
 Voici le résultat de ce qui a été produit :
-* Un logiciel orienté CRUD thinking / DATA et pas métier (un comble pour ERP spécifique)
+* Un logiciel orienté CRUD thinking / DATA et pas métier 
 * 0 tests unitaires (à l'époque je ne me doutais pas à quel point ces derniers m'auraient fait gagner du temps et de la sérénité...)
 * Des méthodes de plusieurs centaines de lignes gérant des "trucs"
 * Des jours pour debug des entités qui mutaient dans l'ORM sans que je sache pourquoi
@@ -57,7 +55,7 @@ Aujourd'hui je pense que je trouverais "effrayant" ce que j'ai développé. Mêm
 * Ne pas m'intéresser au métier, mais uniquement au cahier des charge si réconfortant sur le moment (en plus il était bien écrit, vraiment je n'en ai jamais revu des comme ça)
 * Faire des erreurs pour rester dans les "temps" qu'une autre personne avait déterminé à ma place... Qui n'a jamais entendu j'ai vendu 2 jours donc tu dois le faire en 2 jours? ...
 
-Mais au final et malgré tout ce que j'ai dit, ce projet s'est super bien passé et le client a été super content, donc j'en garde un très bon souvenir ! 
+Au final et malgré tout ce que j'ai dit, je garde un très bon souvenir de ce projet. Il s'est bien passé et le client a été super content ! 
 
 Ce qui a suivi dans cette entreprise est une suite de projets sur les mêmes bases, mais ce premier projet a posé les bases pour que j'apprenne à me comporter en tant que professionnel :
 * ici mettre des notions de clean code
