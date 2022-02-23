@@ -4,6 +4,7 @@ title:  "Le “Messager” : un projet pas comme les autres chez Primobox"
 author: gsaintetienne
 categories: [ Domain Driven Design, Architecture, Retour d'expérience ]
 image: assets/images/messager/messager.png
+image_on_home: assets/images/messager/messager_home.png
 description: "Trouver une entreprise dans laquelle on peut progresser, apprendre, innover, tout en forgeant un logiciel de qualité et des compétences partageables à tout le monde, n’est pas chose courante.
 
 Primobox est de cette trempe là.

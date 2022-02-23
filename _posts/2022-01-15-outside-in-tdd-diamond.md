@@ -4,7 +4,8 @@ title:  "L'Outside-in Diamond TDD, ou l'art de mieux tester"
 author: vdubois
 categories: [ TDD, Architecture ]
 image: assets/images/outside-in-diamond-tdd/outside-in-diamond-resume.jpg
-description: "Comment écrire des tests orientés métier, rapides, et qui vont couvrir le plus de code possible dans votre hexagone."
+image_on_home: assets/images/outside-in-diamond-tdd/outside-in-diamond-home.jpg
+description: "Comment écrire dans une architecture hexagonale des tests orientés métier, rapides, et qui vont couvrir le plus de code possible."
 hidden: false
 ---
 
