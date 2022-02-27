@@ -960,4 +960,16 @@ iframe {
 
 .footer-content {
     padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    white-space: nowrap;
+}
+
+@media (max-width: 300px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
