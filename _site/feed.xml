@@ -5,8 +5,8 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Feb 2022 05:41:04 -0600</pubDate>
-    <lastBuildDate>Sun, 27 Feb 2022 05:41:04 -0600</lastBuildDate>
+    <pubDate>Mon, 28 Feb 2022 06:40:40 -0600</pubDate>
+    <lastBuildDate>Mon, 28 Feb 2022 06:40:40 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -458,8 +458,7 @@ Par contre pour toute opération en base de données (nous avons, en prévision 
 
 &lt;p&gt;Voyons maintenant un exemple de code pour ces tests (gestion de panier sur un site de e-commerce) :&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/83f89ba6a992b4b7e852f440c307710c.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/83f89ba6a992b4b7e852f440c307710c.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 

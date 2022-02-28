@@ -12,12 +12,12 @@ License: https://www.wowthemes.net/freebies-license/
 }
 
 a {
-    color: #00ab6b;
+    color: #0075b0;
     transition: all 0.2s;
 }
 
 a:hover {
-    color: #038252;
+    color: rgba(0,117,176,0.6);
     text-decoration: none;
 }
 
@@ -290,12 +290,13 @@ span.post-read-more a:hover {
 }
 
 .navbar-brand {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
 }
 
 .mediumnavigation .navbar-brand span {
-    font-family: 'Righteous';
-    margin-top: 3px;
+    font-family: 'Geometria';
+    font-weight: bold;
+    margin-top: 7px;
 }
 
 .mediumnavigation .dropdown-menu {
@@ -353,7 +354,7 @@ span.post-read-more a:hover {
 }
 
 blockquote {
-    border-left: 4px solid #00ab6b;
+    border-left: 4px solid #0075b0;
     padding: 0 20px;
     font-style: italic;
     color: rgba(0, 0, 0, .5);
@@ -522,6 +523,7 @@ ul.tags li {
 }
 
 ul.tags li a {
+    font-family: 'Geometria';
     background: rgba(0, 0, 0, .05);
     color: rgba(0, 0, 0, .6);
     border-radius: 3px;
@@ -547,8 +549,8 @@ ul.tags li a:hover {
 }
 
 .btn.follow {
-    border-color: #02B875;
-    color: #1C9963;
+    border-color: #0075b0;
+    color: #0075b0;
     padding: 3px 10px;
     text-align: center;
     border-radius: 999em;
@@ -707,7 +709,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Geometria', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .article-post .h1,
@@ -818,7 +820,8 @@ iframe {
 }
 
 .jumbotron.fortags a {
-    padding: 5px 10px 7px;
+    font-family: 'Geometria';
+    padding: 5px 10px 4px;
     background: #222;
     color: #fff;
     font-weight: 500;
@@ -972,4 +975,26 @@ iframe {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+@font-face {
+    font-family: Geometria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local('Geometria'), url(../fonts/Geometria.woff) format('woff');
+}
+@font-face {
+    font-family: Geometria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: local('Geometria-Medium'), url(../fonts/Geometria-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: Geometria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: local('Geometria-Bold'), url(../fonts/Geometria-Bold.woff) format('woff');
 }
