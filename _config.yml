@@ -2,7 +2,7 @@
 name: "Tech Blog"
 title: "Primobox Tech Blog"
 description: "Innover, Partager, Grandir ensemble"
-logo: 'assets/images/logo.png'
+logo: 'assets/images/Primobox-bleu.svg'
 favicon: 'assets/images/logo.png'
 baseurl:
 disqus: 'primoboxtechblog'

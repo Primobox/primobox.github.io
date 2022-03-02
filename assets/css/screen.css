@@ -290,12 +290,13 @@ span.post-read-more a:hover {
 }
 
 .navbar-brand {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
 }
 
 .mediumnavigation .navbar-brand span {
-    font-family: 'Righteous';
-    margin-top: 3px;
+    font-family: 'Geometria';
+    font-weight: bold;
+    margin-top: 7px;
 }
 
 .mediumnavigation .dropdown-menu {
@@ -522,6 +523,7 @@ ul.tags li {
 }
 
 ul.tags li a {
+    font-family: 'Geometria';
     background: rgba(0, 0, 0, .05);
     color: rgba(0, 0, 0, .6);
     border-radius: 3px;
@@ -707,7 +709,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Geometria', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .article-post .h1,
@@ -818,7 +820,8 @@ iframe {
 }
 
 .jumbotron.fortags a {
-    padding: 5px 10px 7px;
+    font-family: 'Geometria';
+    padding: 5px 10px 4px;
     background: #222;
     color: #fff;
     font-weight: 500;
@@ -972,4 +975,26 @@ iframe {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+@font-face {
+    font-family: Geometria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local('Geometria'), url(../fonts/Geometria.woff) format('woff');
+}
+@font-face {
+    font-family: Geometria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: local('Geometria-Medium'), url(../fonts/Geometria-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: Geometria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: local('Geometria-Bold'), url(../fonts/Geometria-Bold.woff) format('woff');
 }
