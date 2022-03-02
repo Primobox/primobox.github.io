@@ -27,6 +27,7 @@ RUN gem install rb-inotify -v 0.10.0
 RUN gem install ruby_dep -v 1.5.0
 RUN gem install ffi -v 1.10.0
 RUN gem install jekyll-gist -v 1.5.0
+RUN gem install faraday -v 1.9.3
 
 EXPOSE 35729
 
