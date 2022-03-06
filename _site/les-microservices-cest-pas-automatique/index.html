@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../_site/assets/css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css"/>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>Primobox Tech Blog</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Les microservices, c’est pas automatique ! | Tech Blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Les microservices, c’est pas automatique !" />
+<meta name="author" content="afillatre" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Depuis maintenant des années, on parle souvent des microservices comme de la solution à tous les problèmes du monde du logiciel. Alors non seulement l’idée ne date pas d’hier, mais surtout est-ce si bien que cela ?" />
+<meta property="og:description" content="Depuis maintenant des années, on parle souvent des microservices comme de la solution à tous les problèmes du monde du logiciel. Alors non seulement l’idée ne date pas d’hier, mais surtout est-ce si bien que cela ?" />
+<link rel="canonical" href="http://0.0.0.0:4000/les-microservices-cest-pas-automatique/" />
+<meta property="og:url" content="http://0.0.0.0:4000/les-microservices-cest-pas-automatique/" />
+<meta property="og:site_name" content="Tech Blog" />
+<meta property="og:image" content="http://0.0.0.0:4000/assets/images/nom-de-l-article/nom-de-l-article.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-06T00:00:00-06:00" />
+<script type="application/ld+json">
+{"dateModified":"2022-03-06T00:00:00-06:00","datePublished":"2022-03-06T00:00:00-06:00","url":"http://0.0.0.0:4000/les-microservices-cest-pas-automatique/","author":{"@type":"Person","name":"afillatre"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/les-microservices-cest-pas-automatique/"},"@type":"BlogPosting","description":"Depuis maintenant des années, on parle souvent des microservices comme de la solution à tous les problèmes du monde du logiciel. Alors non seulement l’idée ne date pas d’hier, mais surtout est-ce si bien que cela ?","image":"http://0.0.0.0:4000/assets/images/nom-de-l-article/nom-de-l-article.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:4000/assets/images/logo.png"},"name":"afillatre"},"headline":"Les microservices, c’est pas automatique !","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Tech Blog"> <span>Tech Blog</span>
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link recruiting" href="https://primobox.welcomekit.co/" target="_blank">Nous recrutons</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/Primobox"><i class="fab fa-github"></i> Github</a>
+                </li>
+
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="https://twitter.com/primobox/"><i class="fab fa-twitter"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="https://fr.linkedin.com/company/primobox/"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="/feed.xml"><i class="fas fa-rss"></i></a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Recherche"/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <!--h1 class="sitetitle">Tech Blog</h1-->
+    <p class="lead">
+        Innover, Partager, Grandir ensemble
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Partager
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Les microservices, c'est pas automatique !&url=http://0.0.0.0:4000/les-microservices-cest-pas-automatique/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://0.0.0.0:4000/les-microservices-cest-pas-automatique/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/share?mini=true&url=http://0.0.0.0:4000/les-microservices-cest-pas-automatique/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 author-picture-container">
+                        
+                        <img class="author-thumb" src="/assets/images/afillatre.png" alt="Alexandre FIllatre">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark author-name" href="https://www.linkedin.com/in/alexandre-fillatre-696643168/">Alexandre FIllatre</a>
+                        <span class="author-description">Actuellement CTO de Primobox, j'ai passé plus de 10 ans dans le conseil informatique. Depuis quelques années, je m'interesse énormément à la manière de mieux concevoir les logiciels, et particulièrement à la méthode DDD. Convaincu que c'est une manière pertinente de faire les choses, je la mets en place chez Primobox, non seulement dans le code (aspect tactique), mais surtout sur l'approche organisationelle et intellectuelle (aspect stratégique)</span>
+                    </div>
+                </div>
+                
+                
+
+                <span class="post-reading-time">
+
+  19 minutes
+ de lecture</span>
+                <h1 class="posttitle">Les microservices, c'est pas automatique !</h1>
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/nom-de-l-article/nom-de-l-article.jpg" alt="Les microservices, c'est pas automatique !">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h2 id="un-effet-de-mode">Un effet de mode</h2>
+
+<p>Rentrons rapidement dans le vif du sujet.
+J’ai moi-même participé à cette <em>hype</em> il y a quelques années, avec très certainement un manque de recul et un engouement démesuré pour une manière de faire qui semblait nouvelle et révolutionnaire. Dans le monde du java qui est le mien, Netflix avait pavé la route en mettant à disposition tout un tas d’outils promettants monts et merveilles, et Spring Boot - déjà très à la mode aussi - rendait la chose encore plus simple.</p>
+
+<p>Enormément d’entreprises (et donc de développeurs) se sont engouffrés dans cette brèche, pour déchanter quelques années plus tard.</p>
+
+<p>Cet article expliquera, de la manière la plus factuelle possible, l’ensemble des choses qui faut comprendre sur les microservices pour pouvoir décider, en toute connaissance de cause, s’il est pertinent de s’y lancer ou non. Aujourd’hui, l’effet de mode sur ce sujet s’est bien dissipé (bien qu’encore assez présent), et même si la technologie autour de cette pratique a bien évoluée, il n’en reste pas moins que c’est un chemin complexe et souvent anti-productif.</p>
+
+<p>Pour les plus avertis d’entre-vous, vous trouverez très certainement des raccourcis dans mon discours, ou des choses qui ne sont pas entièrement expliquées. Cela est voulu et assumé pour que ce billet reste digeste et ne se transforme pas en livre blanc sur le sujet. Si des zones d’ombre vous intéressent particulièrement, nous pourrons faire un article dédié à leur sujet.</p>
+
+<h2 id="les-principales-problématiques-des-logiciels">Les principales problématiques des logiciels</h2>
+<p>Ci-dessous, une présentation de 4 difficultés récurrentes dans le monde du logiciel. La liste n’est pas exhaustive, mais contient celles qui me semblent être les plus représentatives des problématiques du moment.</p>
+
+<h4 id="la-complexité">La complexité</h4>
+<p>Le plus gros problème que l’on rencontre est, à mon sens, la complexité. Avec la montée en puissance du hardware (un téléphone est maintenant plus puissant qu’un ordinateur d’il y a 10 ans, voire même 5 ans), le nombre de logiciels qui explose, l’impatience croissante des consommateurs (tout le monde veut tout, tout de suite), il en résulte mécaniquement que les logiciels que l’on produit doivent être de plus en plus complexes.</p>
+
+<p>On explique la complexité par le fait que l’on fait mieux que ses concurrents; elle justifie d’écrire plus de lignes de code; elle nous donne le sentiment d’avoir bien travaillé, et réussi à faire ce que d’autres ne sont même pas cabale de comprendre.</p>
+
+<p>Bref, la complexité se développe dans nos applications, et sans trop de surprise, le retour de bâton ne tarde en général jamais à arriver : temps de développement qui explose, montée en compétence compliquée des nouveaux, relecture hasardeuse et pénible de son propre code, etc.</p>
+
+<p>Si seulement il existait un moyen de réduire cette grande complexité en un ensemble de petits problèmes plus simple…</p>
+
+<h4 id="la-performance">La performance</h4>
+<p>Lorsque l’on met un application en production, et qu’elle fonctionne bien, la question de la scalabilité se pose : <em>comment faire pour servir plus de traffic ?</em></p>
+
+<p>Il y a 3 réponses principales :</p>
+<ul>
+  <li>la scalabilité verticale : on augmente la capacité des machines (ajout de ressources)</li>
+  <li>la scalabilité horizontale : on déploie de nouvelles instances</li>
+  <li>l’optimisation : on optimise le code, pour que l’application tourne mieux (oui, oui, c’est une vraie méthode, bien que souvent oubliée / ignorée)</li>
+</ul>
+
+<p>La scalabilité verticale a ses limites, car un serveur très performant coûte rapidement très cher. L’optimisation aussi a ses limites, car le temps investi devient à un moment bien supérieur au gain effectif. La scalabilité horizontale est un bon compromis, mais elle implique quand même quelques choses à ne pas négliger (discutées plus tard dans la suite de ce billet).</p>
+
+<p>Un autre aspect de la performance qu’il ne faut pas oublier, c’est les environnement de dev (donc des développeurs). Travailler sur une application trop grosse peut devenir compliqué pour le quotidien d’un dev, qui verra sa machine régulièrement à court de ressources. Tout le monde ne peut pas se payer tous les 2 ans des machines à plus de 2 000 euros, sous prétexte que <em>ça rame</em>.</p>
+
+<p>Existe-t-il un moyen de découper une application en plusieurs petites qui consommeraient moins ?</p>
+
+<h4 id="le-modèle-de-données">Le modèle de données</h4>
+<p>Vous le savez bien, quand on commence à travailler sur un logiciel, on choisi en premier… la base de données (ok, il y a de l’ironie dans cette phrase, mais elle est malheureusement très proche de la réalité). Et cette base de données devient le coeur névralgique de l’application. Elle grossi de plus en plus, on y ajoute des tables/documents/clés et des colonnes/propriétés/valeurs, et bien sûr tout le monde vient chercher dedans les informations qui l’intéresse.</p>
+
+<p>On se retrouve rapidement avec un système qui a grossi, et on ne sait même plus qui a besoin de quoi. Cela se traduit le plus souvent par une peur voire une incapacité à faire évoluer le modèle, et à le nettoyer (on ne veut pas casser une requête qui <strong><em>pourrait</em></strong> exister sur cette donnée). Au final, un modèle de données qui se dégrade de plus en plus (on ajoute, on ne supprime pas), et un couplage de plus en plus fort et de moins en moins maitrisé.</p>
+
+<p>Comment faire pour rester maître de ses données ?</p>
+
+<h4 id="les-technologies">Les technologies</h4>
+<p>La technologie évolue vite, plus vite que nos logiciels. Alors à un moment, il faut se lancer, et faire des mises à jours. Quand je dis “à un moment”, ce n’est pas forcément dans la minute, dans l’année, ou même dans les 5 ans. Tout cela est une gestion du risque, mais c’est un autre sujet. Par contre, c’est sûr qu’à un moment il faudra évoluer.</p>
+
+<p>Le problème, c’est qu’en général, il faut faire évoluer toute sa base de code en même temps car… c’est le même logiciel. Et ça…. ça pique un peu, voire beaucoup.</p>
+
+<p>Pire, si au lieu de faire une “simple” montée de version, on décide de changer complètement de langage ou de paradigme ? Là c’est la cata. Des semaines, mois, années de boulot pour tout ré-écrire, tout en maintenant l’ancien logiciel en parallèle (car oui, il rapporte quand même des sous en attendant). Et la cerise sur le gâteau, c’est quand le nouveau logiciel met tellement de temps à sortir, qu’il faut continuer à faire évoluer l’ancien pendant ce temps. Si vous avez quelques années d’expérience et vu 2 ou 3 sociétés différentes, il y a de grandes chances que cela vous parle, tellement c’est fréquent.</p>
+
+<p>Et si l’on ne migre pas ? Alors on choisi souvent entre subir des failles de sécurité, des difficultés à recruter, ou un manque de documentation sur le net.</p>
+
+<p>Alors, comment ne pas subir la techno, et rester en capacité d’en changer lorsque c’est nécessaire ?</p>
+
+<h2 id="les-microservices-à-la-rescousse-">Les microservices à la rescousse !</h2>
+
+<p>“Le code est pourri, on y comprend rien !”, faisons des microservices !</p>
+
+<p>“Mon appli consomme 8Go de ram, je ne peux pas la scaler”, faisons des microservices !</p>
+
+<p>“J’en ai marre que les gens tapent directement dans nos bases. On va leur faire une API”, faisons des microservices !</p>
+
+<p>“C’est chiant de ne pas pouvoir faire de Kotlin”, faisons des microservices !</p>
+
+<p>Donc si l’on veut :</p>
+<ul>
+  <li>réduire la complexité en plusieurs petits problèmes plus simples,</li>
+  <li>avoir des applications qui consomment moins et qui nous permettent de scaler uniquement le nécessaire</li>
+  <li>rester maître de ses données</li>
+  <li>pouvoir faire évoluer simplement les technologies utilisées
+alors les microservices semblent être le Graal.</li>
+</ul>
+
+<p>Et sur le papier, c’est très beau ! Un ensemble de services autonomes qui discutent sagement entre eux, qui préviennent rapidement en cas de problème, qui ne font pas écrouler tout le système lors d’un bug, qui ne consomment que le strict nécessaire, qui sont gérés par des équipes différentes (mais qui discutent bien entre-elles), etc. La liste des bienfaits [marketing ?] des microservices est longue.</p>
+
+<h2 id="le-revers-de-la-médaille">Le revers de la médaille</h2>
+<p>Vous vous en doutez (et le ton ironique que j’emploies sciemment est un indice), ce n’est pas non plus le monde des Bisounours. Si l’on regarde de plus près, pour que cela fonctionne, il y a beaucoup de choses à prendre en compte.</p>
+
+<h4 id="le-découpage-en-microservices">Le découpage en microservices</h4>
+<p>Surement le sujet le plus complexe, et là où la majorité des équipes se plantent. Comment découper un affreux monolithe en jolis microservices ?</p>
+
+<h6 id="la-phase-de-découpage">La phase de découpage</h6>
+<p>Toute bonne migration commence par de la réflexion. La question <strong><em>primordiale</em></strong> à se poser est la suivante : comment et quoi découper ?</p>
+
+<p>C’est cette question qui est la plus complexe à ce stade. Un découpage trop fin augmentera le nombre de microservices nécessaires, et donc toute la complexité associée. Un découpage trop approximatif va entraîner une dépendance forte (couplage) entre les microservices, annihilant leurs effets bénéfiques. Il existe des techniques pour faire un bon découpage, et si vous ne les connaissez pas, alors c’est déjà une première alerte rouge que les microservices ne sont pas la bonne solution.</p>
+
+<h6 id="la-phase-de-transition">La phase de transition</h6>
+<p>Dans un monolithe, les appels de code se font de manière local (i.e. dans le même process). Par exemple, pour les langages à base de machine virtuelle, les appels entre les méthodes se font dans la même instance de VM. Hors si l’on veut découper cela en plusieurs applications, il faut changer cela, et passer par un autre protocole. En général, on favorise les APIs Web (JSON par exemple), ou les files de messages.</p>
+
+<p>Il y a donc une première phase de modification de l’existant, pour transformer bon nombre d’appels ad-hoc en un échange de données entre 2 parties. Au mieux l’infrastructure permettant cela est déjà en place, au pire il faut ajouter de nouveaux composants dans le système (le messaging par exemple).</p>
+
+<h6 id="la-phase-de-migration">La phase de migration</h6>
+<p>Une fois le périmètre des services défini, et le découplage du code effectué, on peut migrer une partie du code dans un service externe et autonome : un microservice. Les premiers sont en général simples à faire, et c’est là que la chose est insidieuse : ce n’est qu’une fois bien avancé, que l’on se rend compte des erreurs faites sur la route, et le coût de rectification est en général élevé.</p>
+
+<p>Les principales choses auxquelles penser sont décrites ci-dessous.</p>
+
+<h4 id="lisolation-des-données">L’isolation des données</h4>
+<p>Le premier problème que l’on rencontre est en général l’isolation des données. Pour que le service soit autonome, il faut qu’il soit seul maitre des ses données. Cela implique que d’autres parties de l’application ne doivent pas pouvoir lire ou modifier ses données, mais aussi bien entendu des systèmes externes (une requête manuelle ou automatique faite par une personne extérieure à l’équipe est considérée comme un système externe).</p>
+
+<p>Si ce n’est pas le cas, alors comment être sûr que la modification d’un format de données ne va pas avoir un impact latent sur un autre système ? Il faut donc exposer la donnée autrement (là encore, en général via le protocole HTTP ou le messaging), et définir un contrat entre notre service et l’extérieur. Notre modèle de données peut alors évoluer à sa guise, en fonction des besoins, tant que le contrat défini n’est pas rompu.</p>
+
+<p>C’est à ce niveau qu’est le second challenge : au lieu d’avoir un couplage local (en général validé par le compilateur), on se retrouve à devoir maintenir des contrats avec l’extérieur, donc à devoir les valider et les tester en permanence. Cela se fait via des outils à mettre en place, et des tests supplémentaires à écrire.</p>
+
+<h4 id="le-déploiement-des-microservices">Le déploiement des microservices</h4>
+<p>Lorsque l’on a 1 ou 2 ou 5 microservices, rien de très compliqué pour les déployer. En plus, si le travail est bien fait, ils sont indépendants, et donc ne nécessitent pas une orchestration de la mise en production (synchronisation entre plusieurs MEP pour ne rien casser).</p>
+
+<p>Cependant, au bout d’un moment, leur nombre augmente, et mécaniquement plusieurs autres choses aussi :</p>
+<ul>
+  <li>le temps de build global (checkout, compiliation, tests divers, packaging, déploiement)</li>
+  <li>les resources utilisées (dans la majorité des techno, chaque microservice a un coût d’entrée en termes de ressources)</li>
+  <li>le nombre de personnes nécessaire pour les opérer</li>
+  <li>la latence (voir ci-dessous)</li>
+  <li>etc.</li>
+</ul>
+
+<p>L’adage “diviser pour mieux régner” implique ici de déplacer un problème de couplage de code (problème de dev) sur une problématique d’ops (le déploiement). Et donc, partir dans du microservice dans une culture ops un minimum solide est en général un suicide à petit feu. Et je ne parle même pas ici du monitoring de tous ces services, ou du debug dans un environnement distribué…</p>
+
+<h4 id="la-latence">La latence</h4>
+<p>Mettons tout de suite de côté le contre-argument que les systèmes peuvent être orientés événements (event-driven) ou bien asynchrones (oui, c’est bien 2 choses différentes). C’est vrai, et dans ce cas la latence est un problème bien moindre. Mais ce n’est pas encore comme cela que la majorité des systèmes sont faits. La majorité des systèmes sont majoritairement fondamentalement synchrones, et vont voir leur latence exploser lors d’un passage sur une architecture microservice.</p>
+
+<p>C’est assez simple à s’en rendre compte (quoi qu’il faut y penser !) : si au lieu de faire des appels au sain d’une même application (donc latence très faible, de l’ordre de la nano-seconde), vous le faites via un protocole comme HTTP (même avec des optimisations comme du protobuf ou parquet), on passe rapidement sur un ordre de grandeur de la milliseconde… au mieux. Rajoutez une couche de SSL entre vos services, et c’est encore une poignée de millisecondes de perdus à chaque appel. Ajoutez de l’authentification (déchiffrage de token par exemple), et rebelote.</p>
+
+<p>Alors oui, on peut mettre en place une architecture pour éviter ces 2 choses là, mais on le fait généralement une fois que l’on a eu ces problèmes, et surtout si, encore une fois, on a une maturité d’ops suffisante pour gérer cela. Une nouvelle fois, soit la latence augmente, soit on déporte le problème sur les ops, là où n’y en avait pas avant.</p>
+
+<h4 id="le-monitoring">Le monitoring</h4>
+<p>Dans tout système, on doit pouvoir savoir ce qu’il s’est passé quand quelque chose ne va pas. C’est à cela que sert la majorité du monitoring. “Suivre les chiffres” permet surtout de s’assurer que tout va bien.</p>
+
+<p>Monitorer correctement une application n’est pas si simple. Alors en monitorer 10, 20, 50… Il ne s’agit ici plus de monitorer uniquement ses microservice, mais de monitorer les interactions entre tous les microservices : savoir qui discute avec qui, comment, pourquoi. Et si quelque chose ne tourne pas rond, remonter le fil de service en service jusqu’à trouver le coupable. Et ça… c’est compliqué dans un monde distribué. Plus de stacktrace pour vous montrer par quelles méthodes le code est passé. Il faut retrouver les appels HTTP avec leur payload, ou les messages échangés.</p>
+
+<p>Bien entendu, il existe là encore des outils pour faire cela. Par exemple, <a href="https://opentracing.io" target="_blank">OpenTracing</a>. Et c’est encore une fois quelque chose que nous n’avions pas besoin de faire avant, donc du temps, de l’énergie, de la maintenance en plus.</p>
+
+<h4 id="la-jungle-des-technos">La jungle des technos</h4>
+<p>Pour terminer cette partie, il faut parler de la technologie. Comme évoqué au début de ce post, la technologie va vite, et les besoins et la hype autour de certains choses sont inéluctables. La question n’est pas de savoir <em>si</em> on va devoir évoluer, mais <em>quand</em>.</p>
+
+<p>Les microservices, en isolant les bases de code de chaque service, rendent très simple de développer chaque service dans une technologie différente. Il est vrai que lorsque l’on veut faire quelque chose de nouveau, il faut se demander <em>quelle techno</em>, <em>quel paradigme</em> sont le plus adaptés au besoin.</p>
+
+<p>Mais bien souvent on dérape vite, et les microservices se transforment en un gigantesque bac à sable de test de techno. <em>“C’est juste un microservice parmi d’autre, au pire si ça ne fonctionne pas on le refait !”</em>. Bah… non.</p>
+
+<p>Avoir un ensemble hétérogène de technologies et de pratiques dans une entreprise rend compliqué l’apprentissage et la mobilité interne. Je ne dis pas qu’il faut l’éviter à tout prix. Je dis simplement qu’en général cela se fait sans vraiment de contrôle ou de stratégie, et les microservices réduisent encore un peu plus les garde-fous sur ces sujets, car les échanges entre service se font sur la base de contrats, indépendamment de la techno utilisée.</p>
+
+<p>Et contrairement à ce que l’on pense, refaire un microservice (qui n’est pas forcément un nanoservice) dans une autre techno, n’est pas forcément trivial.</p>
+
+<h2 id="est-ce-que-les-microservices-sont-un-anti-pattern-darchitecture">Est-ce que les microservices sont un anti-pattern d’architecture</h2>
+<p>Ou dit autrement, <em>faut-il les éviter</em> ?</p>
+
+<p>La réponse est claire : <strong><em>Non</em></strong>.</p>
+
+<p>L’architecture microservice n’est pas un mauvais choix d’architecture en tant que tel. Le mauvais choix serait de s’y lancer sans bien en comprendre les tenants et aboutissants. Elle règle un certain nombre de problèmes, mais en crée d’autres. Comme très souvent en informatique, il s’agit d’un choix à faire (trade-off en anglais).</p>
+
+<p>Le ton ironique utilisé à de multiples reprises vise à mettre l’accent sur des choses que l’on pense naïvement bonnes au premiers abords (et j’ai commencé par avouer y être moi-même tombé il y a quelques années), mais qui ont des conséquences importantes. J’espère au moins que cela vous fera réfléchir avant de vous y lancer.</p>
+
+<p>Alors, quand faire du microservice ? Déjà, ce n’est pas forcément un choix binaire. Ce n’est pas soit <em>TOUT</em> en microservice, soit <em>RIEN</em>. On peut très bien faire 2 ou 3 microservices qui cohabitent avec un monolithe (mais un monolithe bien foutu !). Si l’on a besoin de scaler une petite partie de l’application, d’utiliser une techno particulière pour des raisons techniques, juridique, business, etc., ou bien de séparer la base de code du reste pour une bonne raison, alors l’architecture microservice est <em>peut-être</em> adaptée.</p>
+
+<p>Dans ce cas, il reste à se poser la question suivante : <em>Est-ce que les bénéfices seront supérieurs au coût investi ?</em>. Nous avons vu plus haut que pour fonctionner correctement, un architecture microservice à besoin de plusieurs choses :</p>
+<ul>
+  <li>un découpage correct (= du temps)</li>
+  <li>une isolation des données (= de l’expertise dev)</li>
+  <li>un déploiement rôdé (= de l’expertise ops)</li>
+  <li>de monitoring (= de l’expertise ops)</li>
+  <li>d’infrastructure (load balancing, messaging, tracing, resillience, orchestrateur, etc.)</li>
+</ul>
+
+<p>Alors oui, si votre maturité sur ces sujets est assez élevée, vous en tirerez surement des bénéfices. Si non, ce n’est pas grave, il y a d’autres solutions.</p>
+
+<h2 id="une-autre-solution-">Une autre solution ?</h2>
+<p>Si vous pensiez échapper au fameux terme de <strong><em>DDD</em></strong> (<em>Domain Driven Design</em>), alors vous avez eu tord :)</p>
+
+<p>Au début de l’article, j’indique que la complexité est selon moi le plus gros problème des applications. Les autres problèmes ajoutent de l’huile sur le feu, mais ne me semble pas aussi handicapant. Beaucoup d’équipe se sont tournées vers les microservices en pensant réduire leur complexité métier en découpant leur logique en plusieurs services. L’idée est bonne, mais il y a 2 choses à ne pas oublier : savoir découper correctement, et accepter une augmentation de la complexité d’infrastructure en échange. Et c’est là que beaucoup d’entreprise déchantent, car elles n’avaient pas prévu ce palier.</p>
+
+<p>Une autre solution est donc… de rester sur un monolithe. Oui, en 2022, on peut encore faire des monolithes ! Mais pas n’importe comment. Un monolithe bien pensé, sans toute la complexité d’infrastructure qu’amènent les microservices. Et pour cela, quoi de mieux que d’utiliser le <strong><em>DDD</em></strong>.</p>
+
+<p>Car oui, on en revient toujours à ça. La complexité. Comment la réduire ? Bien comprendre son domaine, et créer des sous-domaines adaptés. L’important n’est pas comment ils communiquent (par API Web, messages, RPC, etc.), mais bien de comment ils sont découpés. On peut donc pa,rfaitement les mettre dans un monolithe, et il sera toujours temps de créer des microservices le moment venu, où non seulement nous serons prêt à traiter la complexité qu’ils apportent, mais aussi et surtout lorsque nous aurons de vrais problèmes que les microservices peut adresser.</p>
+
+<p>En gros, quand vous vous lancer dans un nouveau projet, ne partez pas en microservices par défaut sous prétexte qu’<em>“on est en 2022 quand même !”</em>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Pour finir cet article qui était plus long que prévu (et qui pourrait l’être bien plus), retenez une chose : les microservices coûtent cher, en terme de temps, d’argent, et de personnes. Ce n’est pas un choix idiot, mais ça ne doit pas être un choix par défaut ou par ignorance. Ok, c’est à la mode. Et alors ?!</p>
+
+<p>Si vous voulez faire des microservices, commencez par bien comprendre et maitriser le <strong><em>DDD</em></strong>. On ne peut pas faire de microservices correctement sans avoir une vision claire des frontières entre les services. C’est une tâche complexe qui nécessite de l’expertise.</p>
+
+<p>Par contre, on peut faire du <strong><em>DDD</em></strong> sans forcément faire de microservices. Et il ne faut pas en avoir honte.</p>
+
+<p>A bon entendeur…</p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2022-03-06">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 mars 2022</time></span>
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Architecture">Architecture</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Microservices">Microservices</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#TDD">TDD</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'primoboxtechblog'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Catégories <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1 category-name" href="/categories#TDD">TDD (2)</a>
+                
+                    <a class="mt-1 mb-1 category-name" href="/categories#Architecture">Architecture (3)</a>
+                
+                    <a class="mt-1 mb-1 category-name" href="/categories#Domain-Driven-Design">Domain Driven Design (1)</a>
+                
+                    <a class="mt-1 mb-1 category-name" href="/categories#Retour-d'expérience">Retour d'expérience (1)</a>
+                
+                    <a class="mt-1 mb-1 category-name" href="/categories#Microservices">Microservices (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center footer-content">
+                Copyright © 2022 Primobox
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//primoboxtechblog.disqus.com/count.js"></script>
+
+
+</body>
+</html>

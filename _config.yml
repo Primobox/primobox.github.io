@@ -42,6 +42,13 @@ authors:
     email: yohm31@gmail.com
     web: https://www.linkedin.com/in/guillaumese/
     description: "J'ai écrit mes premières lignes de code à l'âge de 11 ans sur un ZX81. J'ai développé des écrans Videotex :-o. Je suis artisan développeur depuis 30 ans déjà, j'ai aussi été architecte logiciel, chef de projet, responsable d'équipe, j'ai travaillé pour diverses ESN et éditeurs logiciels, dont Varian Medical Systems pendant 10 ans, Primobox plus récemment. Actuellement Senior Dev chez Sunday. C# + JS depuis le début, j'ai récemment plongé dans Kotlin avec délectation. Je pense que bien développer c'est: 70% de discussion, 20% de tests, 10% de code."
+  afillatre:
+    name: Alexandre FIllatre
+    display_name: Alexandre FIllatre
+    avatar: 'assets/images/afillatre.png'
+    email: a.fillatre@primobox.com
+    web: https://www.linkedin.com/in/alexandre-fillatre-696643168/
+    description: "Actuellement CTO de Primobox, j'ai passé plus de 10 ans dans le conseil informatique. Depuis quelques années, je m'interesse énormément à la manière de mieux concevoir les logiciels, et particulièrement à la méthode DDD. Convaincu que c'est une manière pertinente de faire les choses, je la mets en place chez Primobox, non seulement dans le code (aspect tactique), mais surtout sur l'approche organisationelle et intellectuelle (aspect stratégique)"
 
 # Plugins
 plugins:
