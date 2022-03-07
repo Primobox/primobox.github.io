@@ -5,8 +5,8 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Mar 2022 15:03:36 -0600</pubDate>
-    <lastBuildDate>Sun, 06 Mar 2022 15:03:36 -0600</lastBuildDate>
+    <pubDate>Mon, 07 Mar 2022 15:08:05 -0600</pubDate>
+    <lastBuildDate>Mon, 07 Mar 2022 15:08:05 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -14,11 +14,11 @@
         <description>&lt;h2 id=&quot;un-effet-de-mode&quot;&gt;Un effet de mode&lt;/h2&gt;
 
 &lt;p&gt;Rentrons rapidement dans le vif du sujet.
-J’ai moi-même participé à cette &lt;em&gt;hype&lt;/em&gt; il y a quelques années, avec très certainement un manque de recul et un engouement démesuré pour une manière de faire qui semblait nouvelle et révolutionnaire. Dans le monde du java qui est le mien, Netflix avait pavé la route en mettant à disposition tout un tas d’outils promettants monts et merveilles, et Spring Boot - déjà très à la mode aussi - rendait la chose encore plus simple.&lt;/p&gt;
+J’ai moi-même participé à cette &lt;em&gt;hype&lt;/em&gt; il y a quelques années, avec très certainement un manque de recul et un engouement démesuré pour une manière de faire qui semblait nouvelle et révolutionnaire. Dans le monde du Java qui est le mien, Netflix avait pavé la route en mettant à disposition tout un tas d’outils promettants monts et merveilles, et Spring Boot - déjà très à la mode aussi - rendait la chose encore plus simple.&lt;/p&gt;
 
 &lt;p&gt;Enormément d’entreprises (et donc de développeurs) se sont engouffrés dans cette brèche, pour déchanter quelques années plus tard.&lt;/p&gt;
 
-&lt;p&gt;Cet article expliquera, de la manière la plus factuelle possible, l’ensemble des choses qui faut comprendre sur les microservices pour pouvoir décider, en toute connaissance de cause, s’il est pertinent de s’y lancer ou non. Aujourd’hui, l’effet de mode sur ce sujet s’est bien dissipé (bien qu’encore assez présent), et même si la technologie autour de cette pratique a bien évoluée, il n’en reste pas moins que c’est un chemin complexe et souvent anti-productif.&lt;/p&gt;
+&lt;p&gt;Cet article expliquera, de la manière la plus factuelle possible, l’ensemble des choses qui faut comprendre sur les microservices pour pouvoir décider, en toute connaissance de cause, s’il est pertinent de s’y lancer ou non. Aujourd’hui, l’effet de mode sur ce sujet s’est bien dissipé (bien qu’encore assez présent), et même si la technologie autour de cette pratique a bien évolué, il n’en reste pas moins que c’est un chemin complexe et souvent anti-productif.&lt;/p&gt;
 
 &lt;p&gt;Pour les plus avertis d’entre-vous, vous trouverez très certainement des raccourcis dans mon discours, ou des choses qui ne sont pas entièrement expliquées. Cela est voulu et assumé pour que ce billet reste digeste et ne se transforme pas en livre blanc sur le sujet. Si des zones d’ombre vous intéressent particulièrement, nous pourrons faire un article dédié à leur sujet.&lt;/p&gt;
 
@@ -28,14 +28,14 @@ J’ai moi-même participé à cette &lt;em&gt;hype&lt;/em&gt; il y a quelques a
 &lt;h4 id=&quot;la-complexité&quot;&gt;La complexité&lt;/h4&gt;
 &lt;p&gt;Le plus gros problème que l’on rencontre est, à mon sens, la complexité. Avec la montée en puissance du hardware (un téléphone est maintenant plus puissant qu’un ordinateur d’il y a 10 ans, voire même 5 ans), le nombre de logiciels qui explose, l’impatience croissante des consommateurs (tout le monde veut tout, tout de suite), il en résulte mécaniquement que les logiciels que l’on produit doivent être de plus en plus complexes.&lt;/p&gt;
 
-&lt;p&gt;On explique la complexité par le fait que l’on fait mieux que ses concurrents; elle justifie d’écrire plus de lignes de code; elle nous donne le sentiment d’avoir bien travaillé, et réussi à faire ce que d’autres ne sont même pas cabale de comprendre.&lt;/p&gt;
+&lt;p&gt;On explique la complexité par le fait que l’on fait mieux que ses concurrents; elle justifie d’écrire plus de lignes de code; elle nous donne le sentiment d’avoir bien travaillé, et réussi à faire ce que d’autres ne sont même pas capable de comprendre.&lt;/p&gt;
 
 &lt;p&gt;Bref, la complexité se développe dans nos applications, et sans trop de surprise, le retour de bâton ne tarde en général jamais à arriver : temps de développement qui explose, montée en compétence compliquée des nouveaux, relecture hasardeuse et pénible de son propre code, etc.&lt;/p&gt;
 
-&lt;p&gt;Si seulement il existait un moyen de réduire cette grande complexité en un ensemble de petits problèmes plus simple…&lt;/p&gt;
+&lt;p&gt;Si seulement il existait un moyen de réduire cette grande complexité en un ensemble de petits problèmes plus simples…&lt;/p&gt;
 
 &lt;h4 id=&quot;la-performance&quot;&gt;La performance&lt;/h4&gt;
-&lt;p&gt;Lorsque l’on met un application en production, et qu’elle fonctionne bien, la question de la scalabilité se pose : &lt;em&gt;comment faire pour servir plus de traffic ?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Lorsque l’on met une application en production, et qu’elle fonctionne bien, la question de la scalabilité se pose : &lt;em&gt;comment faire pour servir plus de traffic ?&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Il y a 3 réponses principales :&lt;/p&gt;
 &lt;ul&gt;
@@ -46,12 +46,12 @@ J’ai moi-même participé à cette &lt;em&gt;hype&lt;/em&gt; il y a quelques a
 
 &lt;p&gt;La scalabilité verticale a ses limites, car un serveur très performant coûte rapidement très cher. L’optimisation aussi a ses limites, car le temps investi devient à un moment bien supérieur au gain effectif. La scalabilité horizontale est un bon compromis, mais elle implique quand même quelques choses à ne pas négliger (discutées plus tard dans la suite de ce billet).&lt;/p&gt;
 
-&lt;p&gt;Un autre aspect de la performance qu’il ne faut pas oublier, c’est les environnement de dev (donc des développeurs). Travailler sur une application trop grosse peut devenir compliqué pour le quotidien d’un dev, qui verra sa machine régulièrement à court de ressources. Tout le monde ne peut pas se payer tous les 2 ans des machines à plus de 2 000 euros, sous prétexte que &lt;em&gt;ça rame&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Un autre aspect de la performance qu’il ne faut pas oublier, c’est les environnements de dev (donc des développeurs). Travailler sur une application trop grosse peut devenir compliqué pour le quotidien d’un dev, qui verra sa machine régulièrement à court de ressources. Tout le monde ne peut pas se payer tous les 2 ans des machines à plus de 2 000 euros, sous prétexte que &lt;em&gt;ça rame&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Existe-t-il un moyen de découper une application en plusieurs petites qui consommeraient moins ?&lt;/p&gt;
 
 &lt;h4 id=&quot;le-modèle-de-données&quot;&gt;Le modèle de données&lt;/h4&gt;
-&lt;p&gt;Vous le savez bien, quand on commence à travailler sur un logiciel, on choisi en premier… la base de données (ok, il y a de l’ironie dans cette phrase, mais elle est malheureusement très proche de la réalité). Et cette base de données devient le coeur névralgique de l’application. Elle grossi de plus en plus, on y ajoute des tables/documents/clés et des colonnes/propriétés/valeurs, et bien sûr tout le monde vient chercher dedans les informations qui l’intéresse.&lt;/p&gt;
+&lt;p&gt;Vous le savez bien, quand on commence à travailler sur un logiciel, on choisi en premier… la base de données (ok, il y a de l’ironie dans cette phrase, mais elle est malheureusement très proche de la réalité). Et cette base de données devient le coeur névralgique de l’application. Elle grossit de plus en plus, on y ajoute des tables/documents/clés et des colonnes/propriétés/valeurs, et bien sûr tout le monde vient chercher dedans les informations qui l’intéresse.&lt;/p&gt;
 
 &lt;p&gt;On se retrouve rapidement avec un système qui a grossi, et on ne sait même plus qui a besoin de quoi. Cela se traduit le plus souvent par une peur voire une incapacité à faire évoluer le modèle, et à le nettoyer (on ne veut pas casser une requête qui &lt;strong&gt;&lt;em&gt;pourrait&lt;/em&gt;&lt;/strong&gt; exister sur cette donnée). Au final, un modèle de données qui se dégrade de plus en plus (on ajoute, on ne supprime pas), et un couplage de plus en plus fort et de moins en moins maitrisé.&lt;/p&gt;
 
@@ -62,7 +62,7 @@ J’ai moi-même participé à cette &lt;em&gt;hype&lt;/em&gt; il y a quelques a
 
 &lt;p&gt;Le problème, c’est qu’en général, il faut faire évoluer toute sa base de code en même temps car… c’est le même logiciel. Et ça…. ça pique un peu, voire beaucoup.&lt;/p&gt;
 
-&lt;p&gt;Pire, si au lieu de faire une “simple” montée de version, on décide de changer complètement de langage ou de paradigme ? Là c’est la cata. Des semaines, mois, années de boulot pour tout ré-écrire, tout en maintenant l’ancien logiciel en parallèle (car oui, il rapporte quand même des sous en attendant). Et la cerise sur le gâteau, c’est quand le nouveau logiciel met tellement de temps à sortir, qu’il faut continuer à faire évoluer l’ancien pendant ce temps. Si vous avez quelques années d’expérience et vu 2 ou 3 sociétés différentes, il y a de grandes chances que cela vous parle, tellement c’est fréquent.&lt;/p&gt;
+&lt;p&gt;Pire, si au lieu de faire une “simple” montée de version, on décide de changer complètement de langage ou de paradigme ? Là c’est la cata. Des semaines, mois, années de boulot pour tout ré-écrire, tout en maintenant l’ancien logiciel en parallèle (car oui, il rapporte quand même des sous en attendant). Et la cerise sur le gâteau, c’est quand le nouveau logiciel met tellement de temps à sortir, qu’il faut continuer à faire évoluer l’ancien pendant ce temps. Si vous avez quelques années d’expérience et vu 2 ou 3 sociétés différentes, il y a de grandes chances pour que cela vous parle tellement c’est fréquent.&lt;/p&gt;
 
 &lt;p&gt;Et si l’on ne migre pas ? Alors on choisi souvent entre subir des failles de sécurité, des difficultés à recruter, ou un manque de documentation sur le net.&lt;/p&gt;
 
@@ -90,10 +90,10 @@ alors les microservices semblent être le Graal.&lt;/li&gt;
 &lt;p&gt;Et sur le papier, c’est très beau ! Un ensemble de services autonomes qui discutent sagement entre eux, qui préviennent rapidement en cas de problème, qui ne font pas écrouler tout le système lors d’un bug, qui ne consomment que le strict nécessaire, qui sont gérés par des équipes différentes (mais qui discutent bien entre-elles), etc. La liste des bienfaits [marketing ?] des microservices est longue.&lt;/p&gt;
 
 &lt;h2 id=&quot;le-revers-de-la-médaille&quot;&gt;Le revers de la médaille&lt;/h2&gt;
-&lt;p&gt;Vous vous en doutez (et le ton ironique que j’emploies sciemment est un indice), ce n’est pas non plus le monde des Bisounours. Si l’on regarde de plus près, pour que cela fonctionne, il y a beaucoup de choses à prendre en compte.&lt;/p&gt;
+&lt;p&gt;Vous vous en doutez (et le ton ironique que j’emploie sciemment est un indice), ce n’est pas non plus le monde des Bisounours. Si l’on regarde de plus près, pour que cela fonctionne, il y a beaucoup de choses à prendre en compte.&lt;/p&gt;
 
 &lt;h4 id=&quot;le-découpage-en-microservices&quot;&gt;Le découpage en microservices&lt;/h4&gt;
-&lt;p&gt;Surement le sujet le plus complexe, et là où la majorité des équipes se plantent. Comment découper un affreux monolithe en jolis microservices ?&lt;/p&gt;
+&lt;p&gt;Sûrement le sujet le plus complexe, et là où la majorité des équipes se plantent. Comment découper un affreux monolithe en jolis microservices ?&lt;/p&gt;
 
 &lt;h6 id=&quot;la-phase-de-découpage&quot;&gt;La phase de découpage&lt;/h6&gt;
 &lt;p&gt;Toute bonne migration commence par de la réflexion. La question &lt;strong&gt;&lt;em&gt;primordiale&lt;/em&gt;&lt;/strong&gt; à se poser est la suivante : comment et quoi découper ?&lt;/p&gt;
@@ -101,7 +101,7 @@ alors les microservices semblent être le Graal.&lt;/li&gt;
 &lt;p&gt;C’est cette question qui est la plus complexe à ce stade. Un découpage trop fin augmentera le nombre de microservices nécessaires, et donc toute la complexité associée. Un découpage trop approximatif va entraîner une dépendance forte (couplage) entre les microservices, annihilant leurs effets bénéfiques. Il existe des techniques pour faire un bon découpage, et si vous ne les connaissez pas, alors c’est déjà une première alerte rouge que les microservices ne sont pas la bonne solution.&lt;/p&gt;
 
 &lt;h6 id=&quot;la-phase-de-transition&quot;&gt;La phase de transition&lt;/h6&gt;
-&lt;p&gt;Dans un monolithe, les appels de code se font de manière local (i.e. dans le même process). Par exemple, pour les langages à base de machine virtuelle, les appels entre les méthodes se font dans la même instance de VM. Hors si l’on veut découper cela en plusieurs applications, il faut changer cela, et passer par un autre protocole. En général, on favorise les APIs Web (JSON par exemple), ou les files de messages.&lt;/p&gt;
+&lt;p&gt;Dans un monolithe, les appels de code se font de manière local (i.e. dans le même process). Par exemple, pour les langages à base de machine virtuelle, les appels entre les méthodes se font dans la même instance de VM. Or si l’on veut découper cela en plusieurs applications, il faut changer cela, et passer par un autre protocole. En général, on favorise les APIs Web (JSON par exemple), ou les files de messages.&lt;/p&gt;
 
 &lt;p&gt;Il y a donc une première phase de modification de l’existant, pour transformer bon nombre d’appels ad-hoc en un échange de données entre 2 parties. Au mieux l’infrastructure permettant cela est déjà en place, au pire il faut ajouter de nouveaux composants dans le système (le messaging par exemple).&lt;/p&gt;
 
@@ -111,7 +111,7 @@ alors les microservices semblent être le Graal.&lt;/li&gt;
 &lt;p&gt;Les principales choses auxquelles penser sont décrites ci-dessous.&lt;/p&gt;
 
 &lt;h4 id=&quot;lisolation-des-données&quot;&gt;L’isolation des données&lt;/h4&gt;
-&lt;p&gt;Le premier problème que l’on rencontre est en général l’isolation des données. Pour que le service soit autonome, il faut qu’il soit seul maitre des ses données. Cela implique que d’autres parties de l’application ne doivent pas pouvoir lire ou modifier ses données, mais aussi bien entendu des systèmes externes (une requête manuelle ou automatique faite par une personne extérieure à l’équipe est considérée comme un système externe).&lt;/p&gt;
+&lt;p&gt;Le premier problème que l’on rencontre est en général l’isolation des données. Pour que le service soit autonome, il faut qu’il soit seul maitre de ses données. Cela implique que d’autres parties de l’application ne doivent pas pouvoir lire ou modifier ses données, mais aussi bien entendu des systèmes externes (une requête manuelle ou automatique faite par une personne extérieure à l’équipe est considérée comme un système externe).&lt;/p&gt;
 
 &lt;p&gt;Si ce n’est pas le cas, alors comment être sûr que la modification d’un format de données ne va pas avoir un impact latent sur un autre système ? Il faut donc exposer la donnée autrement (là encore, en général via le protocole HTTP ou le messaging), et définir un contrat entre notre service et l’extérieur. Notre modèle de données peut alors évoluer à sa guise, en fonction des besoins, tant que le contrat défini n’est pas rompu.&lt;/p&gt;
 
@@ -120,39 +120,38 @@ alors les microservices semblent être le Graal.&lt;/li&gt;
 &lt;h4 id=&quot;le-déploiement-des-microservices&quot;&gt;Le déploiement des microservices&lt;/h4&gt;
 &lt;p&gt;Lorsque l’on a 1 ou 2 ou 5 microservices, rien de très compliqué pour les déployer. En plus, si le travail est bien fait, ils sont indépendants, et donc ne nécessitent pas une orchestration de la mise en production (synchronisation entre plusieurs MEP pour ne rien casser).&lt;/p&gt;
 
-&lt;p&gt;Cependant, au bout d’un moment, leur nombre augmente, et mécaniquement plusieurs autres choses aussi :&lt;/p&gt;
+&lt;p&gt;Cependant, au bout d’un moment, leur nombre augmente, et mécaniquement plusieurs autres choses aussi, comme par exemple :&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;le temps de build global (checkout, compiliation, tests divers, packaging, déploiement)&lt;/li&gt;
-  &lt;li&gt;les resources utilisées (dans la majorité des techno, chaque microservice a un coût d’entrée en termes de ressources)&lt;/li&gt;
+  &lt;li&gt;le temps de build global (checkout, compilation, tests divers, packaging, déploiement)&lt;/li&gt;
+  &lt;li&gt;les resources utilisées (dans la majorité des technos, chaque microservice a un coût d’entrée en termes de ressources)&lt;/li&gt;
   &lt;li&gt;le nombre de personnes nécessaire pour les opérer&lt;/li&gt;
   &lt;li&gt;la latence (voir ci-dessous)&lt;/li&gt;
-  &lt;li&gt;etc.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;L’adage “diviser pour mieux régner” implique ici de déplacer un problème de couplage de code (problème de dev) sur une problématique d’ops (le déploiement). Et donc, partir dans du microservice dans une culture ops un minimum solide est en général un suicide à petit feu. Et je ne parle même pas ici du monitoring de tous ces services, ou du debug dans un environnement distribué…&lt;/p&gt;
+&lt;p&gt;L’adage “diviser pour mieux régner” implique ici de déplacer un problème de couplage de code (problème de dev) sur une problématique d’ops (le déploiement). Et donc, partir dans du microservice sans une culture ops un minimum solide est en général un suicide à petit feu. Et je ne parle même pas ici du monitoring de tous ces services, ou du debug dans un environnement distribué…&lt;/p&gt;
 
 &lt;h4 id=&quot;la-latence&quot;&gt;La latence&lt;/h4&gt;
-&lt;p&gt;Mettons tout de suite de côté le contre-argument que les systèmes peuvent être orientés événements (event-driven) ou bien asynchrones (oui, c’est bien 2 choses différentes). C’est vrai, et dans ce cas la latence est un problème bien moindre. Mais ce n’est pas encore comme cela que la majorité des systèmes sont faits. La majorité des systèmes sont majoritairement fondamentalement synchrones, et vont voir leur latence exploser lors d’un passage sur une architecture microservice.&lt;/p&gt;
+&lt;p&gt;Mettons tout de suite de côté le contre-argument que les systèmes peuvent être orientés événements (event-driven) ou bien asynchrones (oui, c’est bien 2 choses différentes). C’est vrai, et dans ce cas la latence est un problème bien moindre. Mais ce n’est pas encore comme cela que la majorité des systèmes sont faits. La majorité des systèmes sont en majorité fondamentalement synchrones, et vont voir leur latence exploser lors d’un passage sur une architecture microservice.&lt;/p&gt;
 
-&lt;p&gt;C’est assez simple à s’en rendre compte (quoi qu’il faut y penser !) : si au lieu de faire des appels au sain d’une même application (donc latence très faible, de l’ordre de la nano-seconde), vous le faites via un protocole comme HTTP (même avec des optimisations comme du protobuf ou parquet), on passe rapidement sur un ordre de grandeur de la milliseconde… au mieux. Rajoutez une couche de SSL entre vos services, et c’est encore une poignée de millisecondes de perdus à chaque appel. Ajoutez de l’authentification (déchiffrage de token par exemple), et rebelote.&lt;/p&gt;
+&lt;p&gt;C’est assez simple à s’en rendre compte (quoi qu’il faut y penser !) : si au lieu de faire des appels au sein d’une même application (donc latence très faible, de l’ordre de la nano-seconde), vous le faites via un protocole comme HTTP (même avec des optimisations comme du protobuf ou parquet), on passe rapidement sur un ordre de grandeur de la milliseconde… au mieux. Rajoutez une couche de SSL entre vos services, et c’est encore une poignée de millisecondes de perdus à chaque appel. Ajoutez de l’authentification (déchiffrage de token par exemple), et rebelote.&lt;/p&gt;
 
 &lt;p&gt;Alors oui, on peut mettre en place une architecture pour éviter ces 2 choses là, mais on le fait généralement une fois que l’on a eu ces problèmes, et surtout si, encore une fois, on a une maturité d’ops suffisante pour gérer cela. Une nouvelle fois, soit la latence augmente, soit on déporte le problème sur les ops, là où n’y en avait pas avant.&lt;/p&gt;
 
 &lt;h4 id=&quot;le-monitoring&quot;&gt;Le monitoring&lt;/h4&gt;
 &lt;p&gt;Dans tout système, on doit pouvoir savoir ce qu’il s’est passé quand quelque chose ne va pas. C’est à cela que sert la majorité du monitoring. “Suivre les chiffres” permet surtout de s’assurer que tout va bien.&lt;/p&gt;
 
-&lt;p&gt;Monitorer correctement une application n’est pas si simple. Alors en monitorer 10, 20, 50… Il ne s’agit ici plus de monitorer uniquement ses microservice, mais de monitorer les interactions entre tous les microservices : savoir qui discute avec qui, comment, pourquoi. Et si quelque chose ne tourne pas rond, remonter le fil de service en service jusqu’à trouver le coupable. Et ça… c’est compliqué dans un monde distribué. Plus de stacktrace pour vous montrer par quelles méthodes le code est passé. Il faut retrouver les appels HTTP avec leur payload, ou les messages échangés.&lt;/p&gt;
+&lt;p&gt;Monitorer correctement une application n’est pas si simple. Alors en monitorer 10, 20, 50… Il ne s’agit ici plus de monitorer uniquement ses microservices, mais de monitorer les interactions entre tous les microservices : savoir qui discute avec qui, comment, pourquoi. Et si quelque chose ne tourne pas rond, remonter le fil de service en service jusqu’à trouver le coupable. Et ça… c’est compliqué dans un monde distribué. Plus de stacktrace pour vous montrer par quelles méthodes le code est passé. Il faut retrouver les appels HTTP avec leur payload, ou les messages échangés.&lt;/p&gt;
 
 &lt;p&gt;Bien entendu, il existe là encore des outils pour faire cela. Par exemple, &lt;a href=&quot;https://opentracing.io&quot; target=&quot;_blank&quot;&gt;OpenTracing&lt;/a&gt;. Et c’est encore une fois quelque chose que nous n’avions pas besoin de faire avant, donc du temps, de l’énergie, de la maintenance en plus.&lt;/p&gt;
 
 &lt;h4 id=&quot;la-jungle-des-technos&quot;&gt;La jungle des technos&lt;/h4&gt;
-&lt;p&gt;Pour terminer cette partie, il faut parler de la technologie. Comme évoqué au début de ce post, la technologie va vite, et les besoins et la hype autour de certains choses sont inéluctables. La question n’est pas de savoir &lt;em&gt;si&lt;/em&gt; on va devoir évoluer, mais &lt;em&gt;quand&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Pour terminer cette partie, il faut parler de la technologie. Comme évoqué au début de ce post, la technologie va vite, et les besoins et la hype autour de certaines choses sont inéluctables. La question n’est pas de savoir &lt;em&gt;si&lt;/em&gt; on va devoir évoluer, mais &lt;em&gt;quand&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Les microservices, en isolant les bases de code de chaque service, rendent très simple de développer chaque service dans une technologie différente. Il est vrai que lorsque l’on veut faire quelque chose de nouveau, il faut se demander &lt;em&gt;quelle techno&lt;/em&gt;, &lt;em&gt;quel paradigme&lt;/em&gt; sont le plus adaptés au besoin.&lt;/p&gt;
+&lt;p&gt;Les microservices, en isolant les bases de code de chaque service, rendent très simple de développer chaque service dans une technologie différente. Il est vrai que lorsque l’on veut faire quelque chose de nouveau, il faut se demander &lt;em&gt;quelle techno&lt;/em&gt; ou &lt;em&gt;quel paradigme&lt;/em&gt; sont les plus adaptés au besoin.&lt;/p&gt;
 
 &lt;p&gt;Mais bien souvent on dérape vite, et les microservices se transforment en un gigantesque bac à sable de test de techno. &lt;em&gt;“C’est juste un microservice parmi d’autre, au pire si ça ne fonctionne pas on le refait !”&lt;/em&gt;. Bah… non.&lt;/p&gt;
 
-&lt;p&gt;Avoir un ensemble hétérogène de technologies et de pratiques dans une entreprise rend compliqué l’apprentissage et la mobilité interne. Je ne dis pas qu’il faut l’éviter à tout prix. Je dis simplement qu’en général cela se fait sans vraiment de contrôle ou de stratégie, et les microservices réduisent encore un peu plus les garde-fous sur ces sujets, car les échanges entre service se font sur la base de contrats, indépendamment de la techno utilisée.&lt;/p&gt;
+&lt;p&gt;Avoir un ensemble hétérogène de technologies et de pratiques dans une entreprise rend compliqué l’apprentissage et la mobilité interne. Je ne dis pas qu’il faut l’éviter à tout prix. Je dis simplement qu’en général cela se fait sans vraiment de contrôle ou de stratégie, et les microservices réduisent encore un peu plus les garde-fous sur ces sujets, car les échanges entre services se font sur la base de contrats, indépendamment de la techno utilisée.&lt;/p&gt;
 
 &lt;p&gt;Et contrairement à ce que l’on pense, refaire un microservice (qui n’est pas forcément un nanoservice) dans une autre techno, n’est pas forcément trivial.&lt;/p&gt;
 
@@ -163,11 +162,11 @@ alors les microservices semblent être le Graal.&lt;/li&gt;
 
 &lt;p&gt;L’architecture microservice n’est pas un mauvais choix d’architecture en tant que tel. Le mauvais choix serait de s’y lancer sans bien en comprendre les tenants et aboutissants. Elle règle un certain nombre de problèmes, mais en crée d’autres. Comme très souvent en informatique, il s’agit d’un choix à faire (trade-off en anglais).&lt;/p&gt;
 
-&lt;p&gt;Le ton ironique utilisé à de multiples reprises vise à mettre l’accent sur des choses que l’on pense naïvement bonnes au premiers abords (et j’ai commencé par avouer y être moi-même tombé il y a quelques années), mais qui ont des conséquences importantes. J’espère au moins que cela vous fera réfléchir avant de vous y lancer.&lt;/p&gt;
+&lt;p&gt;Le ton ironique utilisé à de multiples reprises vise à mettre l’accent sur des choses que l’on pense naïvement bonnes au premier abord (et j’ai commencé par avouer y être moi-même tombé il y a quelques années), mais qui ont des conséquences importantes. J’espère au moins que cela vous fera réfléchir avant de vous y lancer.&lt;/p&gt;
 
-&lt;p&gt;Alors, quand faire du microservice ? Déjà, ce n’est pas forcément un choix binaire. Ce n’est pas soit &lt;em&gt;TOUT&lt;/em&gt; en microservice, soit &lt;em&gt;RIEN&lt;/em&gt;. On peut très bien faire 2 ou 3 microservices qui cohabitent avec un monolithe (mais un monolithe bien foutu !). Si l’on a besoin de scaler une petite partie de l’application, d’utiliser une techno particulière pour des raisons techniques, juridique, business, etc., ou bien de séparer la base de code du reste pour une bonne raison, alors l’architecture microservice est &lt;em&gt;peut-être&lt;/em&gt; adaptée.&lt;/p&gt;
+&lt;p&gt;Alors, quand faire du microservice ? Déjà, ce n’est pas forcément un choix binaire. Ce n’est pas soit &lt;em&gt;TOUT&lt;/em&gt; en microservices, soit &lt;em&gt;RIEN&lt;/em&gt;. On peut très bien faire 2 ou 3 microservices qui cohabitent avec un monolithe (mais un monolithe bien foutu !). Si l’on a besoin de scaler une petite partie de l’application, d’utiliser une techno particulière pour des raisons techniques, juridiques, business, etc., ou bien de séparer la base de code du reste pour une bonne raison, alors l’architecture microservice est &lt;em&gt;peut-être&lt;/em&gt; adaptée.&lt;/p&gt;
 
-&lt;p&gt;Dans ce cas, il reste à se poser la question suivante : &lt;em&gt;Est-ce que les bénéfices seront supérieurs au coût investi ?&lt;/em&gt;. Nous avons vu plus haut que pour fonctionner correctement, un architecture microservice à besoin de plusieurs choses :&lt;/p&gt;
+&lt;p&gt;Dans ce cas, il reste à se poser la question suivante : &lt;em&gt;Est-ce que les bénéfices seront supérieurs au coût investi ?&lt;/em&gt; Nous avons vu plus haut que pour fonctionner correctement, un architecture microservice a besoin de plusieurs choses :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;un découpage correct (= du temps)&lt;/li&gt;
   &lt;li&gt;une isolation des données (= de l’expertise dev)&lt;/li&gt;
@@ -176,23 +175,23 @@ alors les microservices semblent être le Graal.&lt;/li&gt;
   &lt;li&gt;d’infrastructure (load balancing, messaging, tracing, resillience, orchestrateur, etc.)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Alors oui, si votre maturité sur ces sujets est assez élevée, vous en tirerez surement des bénéfices. Si non, ce n’est pas grave, il y a d’autres solutions.&lt;/p&gt;
+&lt;p&gt;Alors oui, si votre maturité sur ces sujets est assez élevée, vous en tirerez sûrement des bénéfices. Si non, ce n’est pas grave, il y a d’autres solutions.&lt;/p&gt;
 
 &lt;h2 id=&quot;une-autre-solution-&quot;&gt;Une autre solution ?&lt;/h2&gt;
 &lt;p&gt;Si vous pensiez échapper au fameux terme de &lt;strong&gt;&lt;em&gt;DDD&lt;/em&gt;&lt;/strong&gt; (&lt;em&gt;Domain Driven Design&lt;/em&gt;), alors vous avez eu tord :)&lt;/p&gt;
 
-&lt;p&gt;Au début de l’article, j’indique que la complexité est selon moi le plus gros problème des applications. Les autres problèmes ajoutent de l’huile sur le feu, mais ne me semble pas aussi handicapant. Beaucoup d’équipe se sont tournées vers les microservices en pensant réduire leur complexité métier en découpant leur logique en plusieurs services. L’idée est bonne, mais il y a 2 choses à ne pas oublier : savoir découper correctement, et accepter une augmentation de la complexité d’infrastructure en échange. Et c’est là que beaucoup d’entreprise déchantent, car elles n’avaient pas prévu ce palier.&lt;/p&gt;
+&lt;p&gt;Au début de l’article, j’indique que la complexité est selon moi le plus gros problème des applications. Les autres problèmes ajoutent de l’huile sur le feu, mais ne me semblent pas aussi handicapants. Beaucoup d’équipes se sont tournées vers les microservices en pensant réduire leur complexité métier en découpant leur logique en plusieurs services. L’idée est bonne, mais il y a 2 choses à ne pas oublier : savoir découper correctement, et accepter une augmentation de la complexité d’infrastructure en échange. Et c’est là que beaucoup d’entreprises déchantent, car elles n’avaient pas prévu ce palier.&lt;/p&gt;
 
 &lt;p&gt;Une autre solution est donc… de rester sur un monolithe. Oui, en 2022, on peut encore faire des monolithes ! Mais pas n’importe comment. Un monolithe bien pensé, sans toute la complexité d’infrastructure qu’amènent les microservices. Et pour cela, quoi de mieux que d’utiliser le &lt;strong&gt;&lt;em&gt;DDD&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Car oui, on en revient toujours à ça. La complexité. Comment la réduire ? Bien comprendre son domaine, et créer des sous-domaines adaptés. L’important n’est pas comment ils communiquent (par API Web, messages, RPC, etc.), mais bien de comment ils sont découpés. On peut donc pa,rfaitement les mettre dans un monolithe, et il sera toujours temps de créer des microservices le moment venu, où non seulement nous serons prêt à traiter la complexité qu’ils apportent, mais aussi et surtout lorsque nous aurons de vrais problèmes que les microservices peut adresser.&lt;/p&gt;
+&lt;p&gt;Car oui, on en revient toujours à ça. La complexité. Comment la réduire ? Bien comprendre son domaine, et créer des sous-domaines adaptés. L’important n’est pas comment ils communiquent (par API Web, messages, RPC, etc.), mais bien de comment ils sont découpés. On peut donc parfaitement les mettre dans un monolithe, et il sera toujours temps de créer des microservices le moment venu, où non seulement nous serons prêt à traiter la complexité qu’ils apportent, mais aussi et surtout lorsque nous aurons de vrais problèmes que les microservices peuvent adresser.&lt;/p&gt;
 
-&lt;p&gt;En gros, quand vous vous lancer dans un nouveau projet, ne partez pas en microservices par défaut sous prétexte qu’&lt;em&gt;“on est en 2022 quand même !”&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;En gros, quand vous vous lancez dans un nouveau projet, ne partez pas en microservices par défaut sous prétexte qu’&lt;em&gt;“on est en 2022 quand même !”&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Pour finir cet article qui était plus long que prévu (et qui pourrait l’être bien plus), retenez une chose : les microservices coûtent cher, en terme de temps, d’argent, et de personnes. Ce n’est pas un choix idiot, mais ça ne doit pas être un choix par défaut ou par ignorance. Ok, c’est à la mode. Et alors ?!&lt;/p&gt;
+&lt;p&gt;Pour finir cet article qui était plus long que prévu (et qui pourrait l’être bien plus), retenez une chose : les microservices coûtent cher, en terme de temps, d’argent et de personnes. Ce n’est pas un choix idiot, mais ça ne doit pas être un choix par défaut ou par ignorance. Ok, c’est à la mode. Et alors ?!&lt;/p&gt;
 
-&lt;p&gt;Si vous voulez faire des microservices, commencez par bien comprendre et maitriser le &lt;strong&gt;&lt;em&gt;DDD&lt;/em&gt;&lt;/strong&gt;. On ne peut pas faire de microservices correctement sans avoir une vision claire des frontières entre les services. C’est une tâche complexe qui nécessite de l’expertise.&lt;/p&gt;
+&lt;p&gt;Si vous voulez faire des microservices, commencez par bien comprendre et maitriser votre métier au travers de la pratique du &lt;strong&gt;&lt;em&gt;DDD&lt;/em&gt;&lt;/strong&gt;. On ne peut pas faire de microservices correctement sans avoir une vision claire des frontières entre les services. C’est une tâche complexe qui nécessite de l’expertise.&lt;/p&gt;
 
 &lt;p&gt;Par contre, on peut faire du &lt;strong&gt;&lt;em&gt;DDD&lt;/em&gt;&lt;/strong&gt; sans forcément faire de microservices. Et il ne faut pas en avoir honte.&lt;/p&gt;
 
