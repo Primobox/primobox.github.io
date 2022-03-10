@@ -5,75 +5,91 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Mar 2022 11:07:45 -0600</pubDate>
-    <lastBuildDate>Wed, 02 Mar 2022 11:07:45 -0600</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2022 05:26:13 -0600</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2022 05:26:13 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Ma carrière de jeune développeur (1/2)</title>
-        <description>&lt;p&gt;Cela fait maintenant 5 ans que j’ai terminé mes études et pourtant je n’ai eu de cesse de revoir ma définition de ce que c’est qu’être un développeur.&lt;/p&gt;
+        <description>&lt;p&gt;Cela fait maintenant 5 ans que j’ai terminé mes études et pourtant je n’ai eu de cesse de revoir ma vision de ce qu’est un développeur. Voici une rétrospective du premier changement de cette vision.&lt;/p&gt;
 
-&lt;p&gt;Cet article est une rétrospective de ma carrière et de comment j’en suis arrivé à changer ma vision de mon travail.&lt;/p&gt;
+&lt;h2 id=&quot;pourquoi-devenir-développeur-&quot;&gt;Pourquoi devenir développeur ?&lt;/h2&gt;
+&lt;p&gt;Je pense que j’ai eu de la chance dans mes études, j’ai eu des professeurs qui ont su me transmettre leur savoir et me guider afin de que je puisse trouver ce qui me plaît. En effet j’étais très indécis sur ce que je voulais faire à l’époque.&lt;/p&gt;
 
-&lt;h2 id=&quot;mes-études&quot;&gt;Mes études&lt;/h2&gt;
-&lt;p&gt;Je pense que j’ai eu de la chance dans mes études, j’ai eu de super profs qui ont su transmettre leur savoir à tous les niveaux. À l’époque j’étais encore indécis sur la branche de l’informatique que je souhaitais explorer. Créer des infrastructures réseaux, je connaissais un peu je l’avais déjà fait à plusieurs reprises, c’était quelque chose de connu et de confortable pour moi.&lt;/p&gt;
+&lt;p&gt;J’avais déjà créé des infrastructures réseaux à plusieurs reprises, c’était quelque chose de connu et de confortable pour moi, mais j’avais envie de nouveauté.&lt;/p&gt;
 
-&lt;p&gt;Mais dans le développement, il y avait un côté créatif qui me plaisait beaucoup, une exploration du métier intéressante, avec pour point de convergence la POO. Une notion très abstraite au premier abord, mais qui démontre toute sa puissance quand on la maitrise.&lt;/p&gt;
+&lt;p&gt;Dans le développement, il y avait un côté créatif qui me plaisait beaucoup, une exploration du métier intéressante, avec pour point de convergence la programmation orientée objet (POO). Une notion très abstraite au premier abord, mais qui démontre toute sa puissance quand on la maîtrise.&lt;/p&gt;
 
-&lt;p&gt;J’ai vraiment adoré ces notions d’objets vivants qui représente quelque chose dans le monde réel. Comment en leur envoyant des commandes on les fait vivre, et comment ils nous rendent un service. C’est une notion qui m’était cher et je l’ai retrouvé que bien plus tard quand j’ai lu Elegant Objects de Yegor Bugayenko.&lt;/p&gt;
+&lt;p&gt;J’ai vraiment adoré ces notions d’objets vivants qui représentent quelque chose dans le monde réel. Comment en leur envoyant des commandes on les fait vivre, et comment ils nous rendent un service. J’avais alors hâte de voir comment j’allais pouvoir utiliser tout ça dans un vrai cas métier. C’est une notion qui m’était chère et je ne l’ai retrouvée que bien plus tard quand j’ai lu &lt;a href=&quot;https://www.elegantobjects.org/&quot; target=&quot;_blank&quot;&gt;Elegant Objects&lt;/a&gt; de &lt;a href=&quot;https://www.yegor256.com/&quot; target=&quot;_blank&quot;&gt;Yegor Bugayenko&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;A ce moment-là j’avais alors hate de voir comment j’allais pouvoir utiliser tout ça dans un vrai cas métier.&lt;/p&gt;
+&lt;h2 id=&quot;premier-saut-sans-parachute-dans-un-projet-et-premières-erreurs&quot;&gt;Premier saut sans parachute dans un projet et premières erreurs&lt;/h2&gt;
 
-&lt;h2 id=&quot;mon-premier-travail&quot;&gt;Mon premier travail&lt;/h2&gt;
+&lt;p&gt;Mon premier travail (et mon dernier stage) a été un moment charnière dans ma vie de jeune développeur. C’est sûrement à ce moment-là que je me suis le plus construit professionnellement. Je m’en souviens comme une période bénie où des développeurs professionnels m’ont appris comment développer et surtout comment me comporter.&lt;/p&gt;
 
-&lt;p&gt;Mon premier travail (et mon dernier stage) a été un moment charnière dans ma vie de jeune développeur, c’est surement à ce moment-là que je me suis le plus construit professionnellement. Je m’en souviens comme une petite période bénie où de vrais développeurs m’ont appris comment développer et surtout comment me comporter.&lt;/p&gt;
-
-&lt;p&gt;Mon premier projet a démarré comme beaucoup de projet en ESN. On m’a donné un joli cahier des charges et je pouvais alors me lancer en autonomie dans la réalisation de ce tout premier logiciel (ERP).
-Je dois dire que ce moment de lecture a été confortable, car ça me rappelait les gros énoncés de projets/examens que j’avais eu lors de mes études. Une consigne claire, dirigiste, qui ne laisse par contre pas beaucoup de place à la créativité, mais avec beaucoup de choses à assimiler…&lt;/p&gt;
+&lt;p&gt;Mon premier projet a démarré comme pour beaucoup de développeurs en ESN par la réception d’un joli cahier des charges qui devait me permettre de me lancer en autonomie (seul) dans la réalisation de mon tout premier logiciel (un ERP).
+Je dois dire que ce moment de lecture a été confortable, car ça me rappelait les énoncés des projets/examens que j’avais eu lors de mes études. Une consigne claire et orientée solution qui ne laisse pas beaucoup de place à la créativité…&lt;/p&gt;
 
 &lt;p&gt;J’ai naturellement demandé de l’aide aux autres développeurs de l’entreprise qui m’ont expliqué patiemment pleins de choses. 
-J’étais bien loin d’imaginer que j’allais jeter cette notion d’objets vivant que j’avais vu en cours au profit d’un objet qui n’est rien de plus qu’un tas de donnée que je fais transiter au sein de services et qui n’ont plus aucunes responsabilités…. 
-Cela m’a fait un petit choc, j’ai eu l’impression de devoir apprendre pleins de choses et d’être clairement à la ramasse, mais il fallait y aller et surtout faire ses preuves…&lt;/p&gt;
+J’étais bien loin d’imaginer que j’allais jeter cette notion d’objets vivants que j’avais vu en cours au profit d’un objet qui n’est rien de plus qu’un tas de donnée que je faisais seulement transiter au sein de services….
+Cela m’a fait un petit choc, j’ai eu l’impression de devoir apprendre plein de choses et de ne pas être prêt professionnellement. Je me sentais obligé de faire mes preuves, sans savoir comment faire.&lt;/p&gt;
 
-&lt;p&gt;Une class est la représentation d’une table en base de données, qu’on fait transiter au sein de services métiers qui s’appellent les uns les autres. Les explications que je recevais me semblaient alors logique et pleines de bon sens. Et puis c’était quand même vachement facile à faire au premier abord et sans grosse complexité.
-Facile au début oui, mais dès que le projet a grossi je perdais régulièrement le fil des méthodes qui étaient appelées et je devais recommencer de 0 pour m’y retrouver. C’est à ce moment-là que j’ai découvert LA zone de concentration ultime permettant de développer rapidement en gardant en mémoire toutes les étapes, c’est assez classique et souvent recherché par beaucoup de développeurs.&lt;/p&gt;
-
-&lt;p&gt;Ha cette fameuse de zone de concentration ultime que je chérissais tant et qui me permettait d’être “efficace”… Aujourd’hui je la fuis le plus possible car elle m’empêche de prendre le recul nécessaire pour répondre au besoin métier… Mais je digresse et ce n’est pas l’objet de cet article…&lt;/p&gt;
+&lt;p&gt;On m’expliquait qu’une classe est la représentation d’une table en base de données, qu’on la fait transiter au sein de services métiers qui s’appellent les uns les autres. Cela me semblait alors logique et plein de bon sens. C’était aussi plus facile à faire et sans grosse complexité comparé à ce que j’avais appris en cours.
+Facile au début oui, mais dès que le projet a commencé à grossir j’ai perdu régulièrement le fil des méthodes qui étaient appelées et je devais recommencer de zéro pour m’y retrouver.&lt;/p&gt;
 
 &lt;p&gt;On m’a aussi donné un projet exemple sur lequel je pouvais m’appuyer pour comprendre comment je devais développer.
-Autant vous dire que j’ai reproduit toutes les erreurs qu’il y avait déjà dans ce projet et que j’ai ajouté les miennes.
-À l’époque j’étais bien incapable de remettre en question ce projet exemple et encore plus ma manière de développer. J’étais relativement seul sur le projet et j’ai eu peu d’aide externe sauf quand j’osais la demander. J’étais dans les temps donc personne me demandais des comptes et personnes a pris le temps de vérifier que je ne faisais pas de “bêtises”.&lt;/p&gt;
+Autant vous dire que j’ai reproduit toutes les erreurs qu’il y avait déjà dans ce projet et que j’y ai ajouté les miennes.
+J’étais bien incapable de remettre en question ce projet exemple et encore plus ma manière de développer. J’étais relativement seul à développer et j’ai eu peu d’aide externe sauf quand j’osais la demander.&lt;/p&gt;
 
 &lt;p&gt;Voici le résultat de ce qui a été produit :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Un logiciel orienté CRUD thinking / DATA et pas métier&lt;/li&gt;
-  &lt;li&gt;0 tests unitaires (à l’époque je ne me doutais pas à quel point ces derniers m’auraient fait gagner du temps et de la sérénité…)&lt;/li&gt;
+  &lt;li&gt;Aucun test unitaire (à l’époque, je ne me doutais pas à quel point ces derniers m’auraient fait gagner du temps et de la sérénité…)&lt;/li&gt;
   &lt;li&gt;Des méthodes de plusieurs centaines de lignes gérant des “trucs”&lt;/li&gt;
-  &lt;li&gt;Des jours pour debug des entités qui mutaient dans l’ORM sans que je sache pourquoi&lt;/li&gt;
-  &lt;li&gt;Des trigger Base De Données qui contenaient de la logique métier et qui avait développé sans que je le sache (ça j’y ai fait la chasse et je les ai tous éradiqué)&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
+  &lt;li&gt;Des jours entiers pour débuguer des entités qui mutaient dans l’ORM sans que je sache pourquoi&lt;/li&gt;
+  &lt;li&gt;Des triggers Base De Données qui contenaient de la logique métier et qui avaient été développés sans que je le sache&lt;/li&gt;
+  &lt;li&gt;Et bien d’autres choses&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Aujourd’hui je pense que je trouverais “effrayant” ce que j’ai développé. Même s’il y avait un projet exemple qui m’a fortement guidé dans mes erreurs je pense que j’en ai fait plusieurs qui sont entièrement ma faute :&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Ne pas demander de l’aide et qu’écrire des lignes de code qui marchaient suffisait à faire du dev de qualité. À l’école on nous apprend à coder, mais pas à le faire avec qualité, tant que le code affiche les bons trucs c’est qu’il marche on gagne les points. Aujourd’hui je sais que ça ne suffit pas et j’ai lu trop tard Clean Code de Bob Martin, et la différence entre un codeur et un développeur se ressent dans la qualité du code pour moi&lt;/li&gt;
-  &lt;li&gt;Ne pas remettre en question l’existant. Parce que oui même avec plusieurs années d’expérience on continue de faire pleins d’erreurs&lt;/li&gt;
-  &lt;li&gt;Ne pas m’intéresser au métier, mais uniquement au cahier des charge si réconfortant sur le moment (en plus il était bien écrit, vraiment je n’en ai jamais revu des comme ça)&lt;/li&gt;
-  &lt;li&gt;Faire des erreurs pour rester dans les “temps” qu’une autre personne avait déterminé à ma place… Qui n’a jamais entendu j’ai vendu 2 jours donc tu dois le faire en 2 jours? …&lt;/li&gt;
+  &lt;li&gt;Ne pas avoir cherché à comprendre le besoin exprimé, mais uniquement à produire du code qui marche (toujours comprendre le besoin avant de faire des développements !)&lt;/li&gt;
+  &lt;li&gt;Ne pas demander de l’aide alors que j’en avais besoin&lt;/li&gt;
+  &lt;li&gt;Ne pas remettre en question l’existant. Parce que oui même avec plusieurs années d’expérience on continue de faire plein d’erreurs&lt;/li&gt;
+  &lt;li&gt;Ne pas m’intéresser au métier, mais uniquement au cahier des charges si réconfortant sur le moment (il était vraiment bien écrit, je n’en ai jamais revu d’aussi bonne qualité)&lt;/li&gt;
+  &lt;li&gt;Faire des erreurs pour rester dans les “temps” qu’une autre personne avait déterminé à ma place… Qui n’a jamais entendu “J’ai vendu cette fonctionnalité 2 jours donc tu dois la faire en 2 jours” ?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Au final et malgré tout ce que j’ai dit, je garde un très bon souvenir de ce projet. Il s’est bien passé et le client a été super content !&lt;/p&gt;
+&lt;p&gt;Finalement et malgré tout ce que j’ai dit, je garde un très bon souvenir de ce projet. Il s’est bien passé et le client a été super content !&lt;/p&gt;
 
-&lt;p&gt;Ce qui a suivi dans cette entreprise est une suite de projets sur les mêmes bases, mais ce premier projet a posé les bases pour que j’apprenne à me comporter en tant que professionnel :&lt;/p&gt;
+&lt;h2 id=&quot;devenir-un-professionnel&quot;&gt;Devenir un professionnel&lt;/h2&gt;
+
+&lt;p&gt;Une fois ce premier saut réussi j’ai eu la chance d’avoir un nouveau projet ainsi qu’un nouveau manager. Le contexte était par contre beaucoup plus complexe. Les faux pas pouvaient coûter cher et il était hors de question de se planter avec ce client qui était critique pour l’entreprise.&lt;/p&gt;
+
+&lt;p&gt;J’ai commencé à participer à des réunions avec le client, on me demandait mon avis, j’ai dû écrire des spécifications, rassurer le client quand ça n’allait pas, résoudre des bugs en direct. Tout un tas de choses que je n’avais jamais fait auparavant en ayant juste mon joli cahier des charges.&lt;/p&gt;
+
+&lt;p&gt;C’est ici que ma vision de ce qu’est un développeur a changé pour la première fois. On n’est pas un développeur, on est un &lt;strong&gt;professionnel&lt;/strong&gt; du développement. Savoir écrire du code ne fait pas de nous un professionnel.&lt;/p&gt;
+
+&lt;p&gt;Ce changement, je le dois essentiellement à mon manager de l’époque qui m’a accordé très facilement sa confiance et a sû me donner les clés nécessaires pour me professionnaliser. Malgré son côté ESN cette entreprise a toujours été bienveillante en cherchant à faire grandir ses collaborateurs, même les plus inexpérimentés. Avec le recul, je pense que c’est la meilleure ESN dans laquelle puisse espérer tomber un développeur.&lt;/p&gt;
+
+&lt;p&gt;Mais du coup, qu’est-ce qui fait de nous des professionnels ? Je dirais avant toute chose que c’est un état d’esprit. La volonté d’apporter de la valeur au produit, à trouver des solutions pertinentes en prenant en compte le contexte actuel. Cela n’est pas facile et ça l’est encore moins quand on est inexpérimenté. Voici les lignes directrices qui m’ont le plus aidé à acquérir cet état d’esprit :&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;ici mettre des notions de clean code&lt;/li&gt;
+  &lt;li&gt;Justifier ses choix quand on nous le demande&lt;/li&gt;
+  &lt;li&gt;S’engager à fond dans les développements&lt;/li&gt;
+  &lt;li&gt;Dire “non” quand les demandes sont déraisonnables&lt;/li&gt;
+  &lt;li&gt;Ne pas se trouver des excuses pour ne pas faire&lt;/li&gt;
+  &lt;li&gt;Gérer le temps et les priorités&lt;/li&gt;
+  &lt;li&gt;Ne pas céder à la pression&lt;/li&gt;
+  &lt;li&gt;Travailler en équipe, demander de l’aide et proposer la sienne&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;J’étais dans une “ESN” à taille humaine remplie de personnes super. Un mode cycle en V, ou j’ai appris à justifier chacun de mes choix, à toujours m’engager quand cela était nécessaire, et surtout à ne pas le faire lorsque les demandes étaient déraisonnable (surtout sur le temps), sans le savoir j’appliquai pas mal des conseils de Clean Coder de Bob Martin, et ça je le dois essentiellement à mon manager de l’époque qui m’a accordé très facilement sa confiance, avec le recule je pense que j’ai eu beaucoup de chance de l’avoir.&lt;/p&gt;
+&lt;p&gt;Sans le savoir j’appliquais beaucoup de conseils du livre &lt;a href=&quot;https://www.oreilly.com/library/view/the-clean-coder/9780132542913/&quot; target=&quot;_blank&quot;&gt;Clean Coder&lt;/a&gt; de &lt;a href=&quot;http://cleancoder.com/products&quot; target=&quot;_blank&quot;&gt;Bob Martin&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;mon-second-travail-primobox&quot;&gt;Mon second travail Primobox&lt;/h2&gt;
+&lt;h2 id=&quot;primobox--lentreprise-qui-ma-fait-grandir&quot;&gt;PRIMOBOX : L’entreprise qui m’a fait grandir&lt;/h2&gt;
 
-&lt;p&gt;Il est temps de partir vers de nouveaux horizons nommé Primobox, j’y ai perpétué ce que j’avais appris, désappris d’autres choses, évolué et surtout j’y suis devenu ce que je suis un aujourd’hui. Un développeur passionné qui sait qu’il lui reste encore bien des choses à apprendre.&lt;/p&gt;
+&lt;p&gt;J’ai fini par partir de cette ESN pour tout un tas de raisons qui me sont propres. C’est comme ça que je suis arrivé chez Primobox et ça été une révélation pour moi. J’y ai perpétué ce que j’avais appris, désappris d’autres choses, évolué et surtout j’y suis devenu ce que je suis aujourd’hui. Un développeur passionné qui sait qu’il lui reste encore bien des choses à apprendre. Cela je vous en parlerai dans un prochain article.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;L’école m’a appris les bases du développement, mais c’est en entreprise que j’ai compris ce que voulait dire être un professionnel du développement. L’école ne nous prépare pas aux enjeux du monde du travail, à comprendre les interactions humaines et à gérer les pressions externes. Tout cela s’acquiert avec l’expérience, et avec de la chance, des collègues seront là pour nous aider.&lt;/p&gt;
 </description>
         <pubDate>Wed, 23 Feb 2022 00:00:00 -0600</pubDate>
         <link>http://0.0.0.0:4000/retrospective-d-une-carriere-de-jeune-developpeur-1/</link>
