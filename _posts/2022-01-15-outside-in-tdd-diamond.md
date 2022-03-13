@@ -46,6 +46,7 @@ La notion d'**Outside-in TDD** est assez simple à comprendre : on teste de l'ex
 
 On commence donc par écrire des **tests d'acceptation** "gros grains" qui sont orientés métier et testent le système en boîte noire. Pendant la phase red de TDD portant sur ces tests gros grains, on peut être amené à réaliser des boucles TDD plus petites sur l'intérieur du système, typiquement sur le modèle du domaine. A la fin, une fois toutes ces petites boucles réalisées, la boucle principale "gros grain" deviendra alors passante.
 
+**L'énorme avantage de cette approche** par rapport à l'inside out (beaucoup plus répandu) est que l'on ne crée pas de test ou de code de production qui ne correspond pas à un besoin métier. Cela n'est pas sans rappeler le principe **YAGNI** (You Ain't Gonna Need It). Pas de superflu !
 
 #### Diamond
 

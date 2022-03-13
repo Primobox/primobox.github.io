@@ -5,8 +5,8 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2022 05:26:13 -0600</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2022 05:26:13 -0600</lastBuildDate>
+    <pubDate>Sun, 13 Mar 2022 12:47:01 -0500</pubDate>
+    <lastBuildDate>Sun, 13 Mar 2022 12:47:01 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -445,6 +445,8 @@ Par contre pour toute opération en base de données (nous avons, en prévision 
 &lt;p&gt;La notion d’&lt;strong&gt;Outside-in TDD&lt;/strong&gt; est assez simple à comprendre : on teste de l’extérieur en allant vers l’intérieur.&lt;/p&gt;
 
 &lt;p&gt;On commence donc par écrire des &lt;strong&gt;tests d’acceptation&lt;/strong&gt; “gros grains” qui sont orientés métier et testent le système en boîte noire. Pendant la phase red de TDD portant sur ces tests gros grains, on peut être amené à réaliser des boucles TDD plus petites sur l’intérieur du système, typiquement sur le modèle du domaine. A la fin, une fois toutes ces petites boucles réalisées, la boucle principale “gros grain” deviendra alors passante.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;L’énorme avantage de cette approche&lt;/strong&gt; par rapport à l’inside out (beaucoup plus répandu) est que l’on ne crée pas de test ou de code de production qui ne correspond pas à un besoin métier. Cela n’est pas sans rappeler le principe &lt;strong&gt;YAGNI&lt;/strong&gt; (You Ain’t Gonna Need It). Pas de superflu !&lt;/p&gt;
 
 &lt;h4 id=&quot;diamond&quot;&gt;Diamond&lt;/h4&gt;
 
