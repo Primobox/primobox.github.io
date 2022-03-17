@@ -5,16 +5,16 @@
     <description>Innover, Partager, Grandir ensemble</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Mar 2022 12:47:01 -0500</pubDate>
-    <lastBuildDate>Sun, 13 Mar 2022 12:47:01 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Mar 2022 11:27:15 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Mar 2022 11:27:15 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Ma carrière de jeune développeur (1/2)</title>
+        <title>Ma carrière de jeune développeur</title>
         <description>&lt;p&gt;Cela fait maintenant 5 ans que j’ai terminé mes études et pourtant je n’ai eu de cesse de revoir ma vision de ce qu’est un développeur. Voici une rétrospective du premier changement de cette vision.&lt;/p&gt;
 
 &lt;h2 id=&quot;pourquoi-devenir-développeur-&quot;&gt;Pourquoi devenir développeur ?&lt;/h2&gt;
-&lt;p&gt;Je pense que j’ai eu de la chance dans mes études, j’ai eu des professeurs qui ont su me transmettre leur savoir et me guider afin de que je puisse trouver ce qui me plaît. En effet j’étais très indécis sur ce que je voulais faire à l’époque.&lt;/p&gt;
+&lt;p&gt;Je pense que j’ai eu de la chance dans mes études, j’ai eu des professeurs qui ont su me transmettre leur savoir et me guider afin que je puisse trouver ce qui me plaît. En effet j’étais très indécis sur ce que je voulais faire à l’époque.&lt;/p&gt;
 
 &lt;p&gt;J’avais déjà créé des infrastructures réseaux à plusieurs reprises, c’était quelque chose de connu et de confortable pour moi, mais j’avais envie de nouveauté.&lt;/p&gt;
 
@@ -92,8 +92,8 @@ J’étais bien incapable de remettre en question ce projet exemple et encore pl
 &lt;p&gt;L’école m’a appris les bases du développement, mais c’est en entreprise que j’ai compris ce que voulait dire être un professionnel du développement. L’école ne nous prépare pas aux enjeux du monde du travail, à comprendre les interactions humaines et à gérer les pressions externes. Tout cela s’acquiert avec l’expérience, et avec de la chance, des collègues seront là pour nous aider.&lt;/p&gt;
 </description>
         <pubDate>Wed, 23 Feb 2022 00:00:00 -0600</pubDate>
-        <link>http://0.0.0.0:4000/retrospective-d-une-carriere-de-jeune-developpeur-1/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/retrospective-d-une-carriere-de-jeune-developpeur-1/</guid>
+        <link>http://0.0.0.0:4000/carriere-de-jeune-developpeur/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/carriere-de-jeune-developpeur/</guid>
         
         
         <category>Retour d'expérience</category>

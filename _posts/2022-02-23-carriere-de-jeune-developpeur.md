@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Ma carrière de jeune développeur (1/2)"
+title:  "Ma carrière de jeune développeur"
 author: dboue
 categories: [ Retour d'expérience, Clean codeur ]
-image: assets/images/retrospective-d-une-carriere-de-jeune-developpeur-1/developpeur-bureau.jpg
-image_on_home: assets/images/retrospective-d-une-carriere-de-jeune-developpeur-1/developpeur-bureau.jpg
+#image: assets/images/carriere-de-jeune-developpeur/developpeur-bureau.jpg
+image_on_home: assets/images/carriere-de-jeune-developpeur/developpeur-bureau.jpg
 description: "Cela fait maintenant 5 ans que j'ai terminé mes études et pourtant je n'ai eu de cesse de revoir ma vision de ce qu'est un développeur. Voici une rétrospective du premier changement de cette vision."
 hidden: false # à changer pour masquer l'article ou non
 ---
@@ -12,7 +12,7 @@ hidden: false # à changer pour masquer l'article ou non
 Cela fait maintenant 5 ans que j'ai terminé mes études et pourtant je n'ai eu de cesse de revoir ma vision de ce qu'est un développeur. Voici une rétrospective du premier changement de cette vision.
 
 ## Pourquoi devenir développeur ?
-Je pense que j'ai eu de la chance dans mes études, j'ai eu des professeurs qui ont su me transmettre leur savoir et me guider afin de que je puisse trouver ce qui me plaît. En effet j'étais très indécis sur ce que je voulais faire à l'époque. 
+Je pense que j'ai eu de la chance dans mes études, j'ai eu des professeurs qui ont su me transmettre leur savoir et me guider afin que je puisse trouver ce qui me plaît. En effet j'étais très indécis sur ce que je voulais faire à l'époque. 
 
  J'avais déjà créé des infrastructures réseaux à plusieurs reprises, c'était quelque chose de connu et de confortable pour moi, mais j'avais envie de nouveauté.
 
