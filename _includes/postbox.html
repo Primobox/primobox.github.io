@@ -6,7 +6,7 @@
     <div class="card h-100">
         <div class="maxthumb">
             <a href="{{ site.baseurl }}{{ post.url }}">
-                {% if post.image %}
+                {% if post.image_on_home %}
                         {% if site.lazyimages == "enabled" %}
                             {% if post.image_on_home %}
                                 <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image_on_home contains "://" %}{{ post.image_on_home }}{% else %}{{ site.baseurl }}/{{ post.image_on_home }}{% endif %}" alt="{{ post.title }}">
