@@ -5,4 +5,4 @@ _site/dev.bat
 _site/dev.sh
 _site/Dockerfile
 _site/README.adoc
-CNAME
+.DS_Store
