@@ -9,6 +9,10 @@
 <lastmod>2022-02-02T00:00:00-06:00</lastmod>
 </url>
 <url>
+<loc>http://0.0.0.0:4000/carriere-de-jeune-developpeur/</loc>
+<lastmod>2022-02-23T00:00:00-06:00</lastmod>
+</url>
+<url>
 <loc>http://0.0.0.0:4000/les-microservices-cest-pas-automatique/</loc>
 <lastmod>2022-03-06T00:00:00-06:00</lastmod>
 </url>
@@ -29,6 +33,9 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/category/retour-d-exp%C3%A9rience/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/category/clean-codeur/</loc>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/category/microservices/</loc>

@@ -3,7 +3,8 @@ layout: post
 title:  "Les microservices, c'est pas automatique !"
 author: afillatre
 categories: [ TDD, Architecture, Microservices ]
-image: assets/images/nom-de-l-article/nom-de-l-article.jpg
+image: assets/images/micro-pas-auto/photo-couverture.png
+image_on_home: assets/images/micro-pas-auto/visuel-article.png
 description: "Depuis maintenant des années, on parle souvent des microservices comme de la solution à tous les problèmes du monde du logiciel. Alors non seulement l'idée ne date pas d'hier, mais surtout est-ce si bien que cela ?"
 hidden: false # à changer pour masquer l'article ou non
 ---
@@ -64,6 +65,8 @@ Et si l'on ne migre pas ? Alors on choisi souvent entre subir des failles de sé
 Alors, comment ne pas subir la techno, et rester en capacité d'en changer lorsque c'est nécessaire ?
 
 ## Les microservices à la rescousse !
+
+![](../assets/images/micro-pas-auto/microservices-rescousse.png)
 
 "Le code est pourri, on y comprend rien !", faisons des microservices !
 
@@ -150,6 +153,8 @@ Et contrairement à ce que l'on pense, refaire un microservice (qui n'est pas fo
 ## Est-ce que les microservices sont un anti-pattern d'architecture
 Ou dit autrement, *faut-il les éviter* ?
 
+![](../assets/images/micro-pas-auto/microservices-antipattern.png)
+
 La réponse est claire : ***Non***.
 
 L'architecture microservice n'est pas un mauvais choix d'architecture en tant que tel. Le mauvais choix serait de s'y lancer sans bien en comprendre les tenants et aboutissants. Elle règle un certain nombre de problèmes, mais en crée d'autres. Comme très souvent en informatique, il s'agit d'un choix à faire (trade-off en anglais).
@@ -179,6 +184,9 @@ Car oui, on en revient toujours à ça. La complexité. Comment la réduire ? Bi
 En gros, quand vous vous lancez dans un nouveau projet, ne partez pas en microservices par défaut sous prétexte qu'*"on est en 2022 quand même !"*.
 
 ## Conclusion
+
+![](../assets/images/micro-pas-auto/conclusion.png)
+
 Pour finir cet article qui était plus long que prévu (et qui pourrait l'être bien plus), retenez une chose : les microservices coûtent cher, en terme de temps, d'argent et de personnes. Ce n'est pas un choix idiot, mais ça ne doit pas être un choix par défaut ou par ignorance. Ok, c'est à la mode. Et alors ?! 
 
 Si vous voulez faire des microservices, commencez par bien comprendre et maitriser votre métier au travers de la pratique du ***DDD***. On ne peut pas faire de microservices correctement sans avoir une vision claire des frontières entre les services. C'est une tâche complexe qui nécessite de l'expertise.
