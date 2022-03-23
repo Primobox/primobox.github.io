@@ -33,9 +33,18 @@ hidden: false # à changer pour masquer l'article ou non
 
 Pour voir le rendu de votre article, ouvrez un terminal, et tapez :
 
+Sous Linux ou Mac : 
+
 [source,shell script]
 ----
 ./dev.sh
+----
+
+Sous Windows : 
+
+[source,shell script]
+----
+./dev.bat
 ----
 
 Une fois le serveur Jekyll lancé, ouvrez votre navigateur à l'URL http://localhost:4000
