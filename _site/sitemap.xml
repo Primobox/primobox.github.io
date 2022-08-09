@@ -17,6 +17,10 @@
 <lastmod>2022-03-06T00:00:00-06:00</lastmod>
 </url>
 <url>
+<loc>http://0.0.0.0:4000/post-mortem/</loc>
+<lastmod>2022-08-09T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>http://0.0.0.0:4000/categories</loc>
 </url>
 <url>
@@ -39,5 +43,8 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/category/microservices/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/category/agilit%C3%A9/</loc>
 </url>
 </urlset>
